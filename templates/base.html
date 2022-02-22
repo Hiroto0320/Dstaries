@@ -1,0 +1,35 @@
+<html>
+{% load static %}
+<!-- navbar Start -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% comment %} <script type="text/javascript" src="{% static 'js/app.js' %}"></script> {% endcomment %}
+<title>Dreamers {% block title %}{% endblock %}</title>
+<nav>
+    <div class="logo"></div>
+    <ul>
+        <li><a href="{% url 'dreams:home' %}">Home</a></li>
+
+        {% if user.is_authenticated %}
+        <li>
+            <a href="{% url 'accounts:signout' %}" method="POST">
+            {% csrf_token %}
+            Sign Out
+            </a>
+        </li>
+        {% comment %} <li>
+            <a href="{% url 'accounts:' %}" method="POST">
+            {% csrf_token %}
+            My Page
+            </a>
+        </li> {% endcomment %}
+        <li><a href="{% url 'accounts:profile' %}">My account</a></li>
+        <li><a href="{% url 'accounts:diary' user.id %}">My diary</a></li>
+        {% else %}
+        <li><a href="{% url 'accounts:sign' %}">Sign in  /  Sign up</a></li>
+        {% endif %}
+    </ul>
+</nav>
+<!-- navbar end -->
+{% block content %}
+{% endblock %}
+</html>

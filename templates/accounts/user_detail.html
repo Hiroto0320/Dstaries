@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %} | {{ user_detail.username }}'s detail{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+<body>
+<section id="settings">
+      <ul>
+        <li class="large padding avatar">
+          <img class="icon" {% if user_detail.image %} src="{{ user_detail.image.url }}" {% endif %}>
+          <p class="username">{{ user_detail.username }}</p>
+          <a href="{{ user_detail.website }}" class="website" target="_blank">
+            <img src="{% static 'css/img/cloud-website-removebg-preview.png' %}" height="70px" width="100px" class="website-hukidashi">
+          </a>
+          <a href="{% url 'accounts:diary' user_detail.id %}" class="diary">
+            <img src="{% static 'css/img/cloud-304979__480-removebg-preview.png' %}" height="70px" width="100px" class="diary-hukidashi">
+          </a>
+          {% comment %} <a href="{% url 'direct_messages:direct_message' user.id user_detail.id %}" class="direct message">
+            <img src="{% static 'css/hukidashi.png' %}" height="40" width="60">
+          </a> {% endcomment %}
+        </li>
+        <li>
+          {% if user_detail.dream %}
+          <fieldset class="material">
+            <div>
+              <p>{{ user_detail.dream }}</p>
+              <label>Dream</label>
+              <hr/>
+            </div>
+          </fieldset>
+          {% endif %}
+        </li>
+        <li>
+          {% if user_detail.task %}
+          <fieldset class="material">
+            <div>
+              <p>{{ user_detail.task }}</p>
+                <label>My Task</label>
+              <hr/>
+            </div>
+          </fieldset>
+          {% endif %}
+        </li>
+        <li>
+          {% comment %} {% if user_detail.twitter_link %}
+          <fieldset class="material-link">
+            <div>
+              <a href="{{ user_detail.twitter_link }}">Follow my twitter</a>
+              <hr/>
+            </div>
+          </fieldset>
+          {% endif %}
+        </li>
+        <li>
+          {% if user_detail.facebook_link %}
+          <fieldset class="material-link">
+            <div>
+              <a href="{{ user_detail.facebook_link }}">Follow my facebook</a>
+              <hr/>
+            </div>
+          </fieldset>
+          {% endif %} {% endcomment %}
+        </li>
+        {% if user_detail.introduction %}
+        <li class="large">
+          <fieldset class="material">
+            <div>
+              <p>{{ user_detail.introduction | linebreaksbr }}</p>
+              <label>About me</label>
+              <hr/>
+            </div>
+          </fieldset>
+          {% endif %}
+        </li>
+      </ul>
+  </section>
+</body>
+{% endblock %}

@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+{% block title %} | Account Page{% endblock %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+<div id="settings" ontouchstart="<%= true %>">
+    <input checked="<%= true %>" class="nav" name="nav" type="radio"></input>
+    <span class="nav">Edit profile</span>
+    <input class="nav" name="nav" type="radio"></input>
+    <span class="nav">Keep a diary</span>
+    <input class="nav" name="nav" type="radio"></input>
+    <span class="nav">Edit books</span>
+    <input class="nav" name="nav" type="radio"></input>
+    <span class="nav">Coming soon..</span>
+    <main class="content">
+      <section id="profile">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <ul>
+            <li class="large padding avatar">
+              <img class="icon" {% if user.image %} src="{{ user.image.url }}" {% endif %}>
+              <div>
+                {% comment %} <fieldset class="material-checkbox">
+                  <div>
+                    <input checked="<%= true %>" type="checkbox"></input>
+                    <div class="check">
+                      <span>
+                        <svg viewBox="0 0 24 24">
+                          <g>
+                            <line x1="4.5" x2="9.24" y1="12.5" y2="17.24"></line>
+                            <line x1="9.24" x2="19.76" y1="17.24" y2="6.73"></line>
+                          </g>
+                          <g>
+                            <line x1="4.5" x2="9.24" y1="12.5" y2="17.24"></line>
+                            <line x1="9.24" x2="19.76" y1="17.24" y2="6.73"></line>
+                          </g>
+                        </svg>
+                      </span>
+                      <label>Use Gravatar</label>
+                    </div>
+                  </div>
+                </fieldset>
+                <input class="material-button"> {% endcomment %}
+                  <div>
+                    {% comment %} <label for="file" class="filelabel">select image</label>
+                    <input type="file" name="image" id="file" class="fileinput"></input> {% endcomment %}
+                    <p class="image-form">{{ form }}<p>
+                  </div>
+              </div>
+            </li>
+            <li>
+              <fieldset class="material">
+                <div>
+                  <input type="text" value="{{ user.username }}" name="username" required></input>
+                  <label>Uesrname</label>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset class="material">
+                <div>
+                  <input type="text" value="{% if user.country %}{{ user.country }}{% endif %}" name="country"></input>
+                  <label>Your country</label>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset class="material">
+                <div>
+                  <input type="text" name="dream" value="{% if user.dream %}{{ user.dream }}{% endif %}"></input>
+                  <label>dream</label>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset class="material">
+                <div>
+                  <input type="text" name="task" value="{% if user.task %}{{ user.task }}{% endif %}"></input>
+                  <label>What you decided to do</label>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li class="large">
+              <fieldset class="material">
+                <div>
+                  <textarea name="about" cols="70" rows="5" class="about-text" maxlength="400">{% if user.introduction %}{{ user.introduction }}{% endif %}</textarea>
+                  <label class="about-label">About you</label>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset class="material">
+                <div>
+                    <input type="url" pattern="https://.*" name="website" placeholder="https://" value="{% if user.website %}{{ user.website }}{% endif %}"></input>
+                    <label>Your Website</label>
+                </div>
+              </fieldset>
+            </li>
+            <li>
+              <label class="is_public-label">
+                {% if user.is_public %}
+                <input type="radio" name="is_public-account" value="False" class="is_private-checkbox">
+                Private
+                <input type="radio" name="is_public-account" value="True" class="is_private-checkbox" checked>
+                Public
+                {% else %}
+                <input type="radio" name="is_public-account" value="False" class="is_private-checkbox" checked>
+                Private
+                <input type="radio" name="is_public-account" value="True" class="is_private-checkbox">
+                Public
+                {% endif %}
+              </label>
+            </li>
+            <li class="large padding">
+              <fieldset class="material-button center">
+                <div>
+                  <input class="save" type="submit" value="Save">
+                </div>
+              </fieldset>
+            </li>
+          </ul>
+        </form>
+      </section>
+      <section id="account">
+        <form action="{% url 'accounts:profile' %}" method="POST">
+          {% csrf_token %}
+          <ul>
+            <li>
+              <fieldset class="material">
+                <div>
+                  <select name="diary-title" value="Title" required>
+                    <option value="" disabled selected style="display:none;" class="None-option">Choose a book</option>
+                    {% for title in diary_title %}
+                    <option>{{title.diary_title}}</option>
+                    {% endfor %}
+                  </select>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset class="material">
+                <div>
+                  <input type="text" name="diary-subtitle" placeholder="Diary subtitle"></input>
+                  <label>SubTitle</label>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li class="large">
+              <fieldset class="material">
+                <div>
+                  <textarea name="content" cols="70" rows="5" class="diary-content" placeholder="Write content here" maxlength="700" required></textarea>
+                  <label class="diary-label">Content</label>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li class="large padding">
+              <fieldset class="material-button center">
+                <div>
+                  <input class="save" type="submit" value="Complete"></input>
+                </div>
+              </fieldset>
+            </li>
+          </ul>
+        </form>
+      </section>
+      <section class="upcoming" id="advanced">
+        <form action="{% url 'accounts:profile' %}" method="POST">
+          {% csrf_token %}
+          <ul>
+            <li>
+              <fieldset class="material">
+                <div>
+                  <input type="text" name="create_diary-title" placeholder="You can create new books"></input>
+                  <label class="about-label">Title</label>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li>
+              <label class="is_public-label">
+                <input type="radio" name="is_public" value="False" class="is_private-checkbox">
+                Private
+                <input type="radio" name="is_public" value="True" class="is_private-checkbox">
+                Public
+              </label>
+            </li>
+            <li class="large padding" >
+              <fieldset class="material">
+                <div>
+                  <select name="delete_diary-title">
+                    <option value="" disabled selected style="display:none;" class="None-option">You can delete Books here.</option>
+                    {% for title in diary_title %}
+                    <option>{{title.diary_title}}</option>
+                    {% endfor %}
+                  </select>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li class="large padding">
+              <fieldset class="material">
+                <div>
+                  <select name="delete_diary-content">
+                    <option value="" selected class="None-option">You can delete contents in your books here.</option>
+                    <option value="">Title : Subtitle</option>
+                    {% for content in contents %}
+                    <option value="{{ content.id }}">{{ content.diary_title }} : {{ content.subtitle }}</option>
+                    {% endfor %}
+                  </select>
+                  <hr/>
+                </div>
+              </fieldset>
+            </li>
+            <li class="large padding">
+              <fieldset class="material-button center">
+                <div>
+                  <input class="save" type="submit" value="Complete"></input>
+                </div>
+              </fieldset>
+            </li>
+          </ul>
+        </form>
+      </section>
+      <section class="upcoming" id="createNewBook">
+        <h1>Coming&nbsp;soon!</h1>
+      </section>
+      
+    </main>
+</div>
+
+{% endblock %}

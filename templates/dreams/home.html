@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<!-- Header Start -->
+<header>
+    <div class="headline">
+        <div class="inner">
+            <h1>Dreamers</h1>
+            {% if user.is_authenticated %}
+            <p>welcome {{ user.username }}! </p>
+            {% else %}
+            <p>welcome here dreamers! </p>
+            {% endif %}
+        </div>
+    </div>
+</header>
+<section>
+    {% if user.is_authenticated %}
+        <h2>Active users!</h2>
+        <p>Users who are keeping a diary frequently.</p>
+        {% comment %} <h3>
+            Users who are keeping a diary frequently are displayed here!<br>
+            If you do not want to be displayed, you can check 'Private' at your 'Edit Profile'.
+        </h3> {% endcomment %}
+        {% for user in users|slice:":5" %}
+            {% if user.is_public %}
+                <ul>
+                    <li>
+                        {% if user.image %}
+                            <img src="{{ user.image.url }}" height="80px" width="80px" style="border-radius: 8px;">
+                        {% else %}
+                            <img src="{% static 'css/img/default.jpg' %}" height="80px" width="80px" style="border-radius: 8px;">
+                        {% endif %}
+                    </li>
+                    <li>
+                        <a href="{% url 'accounts:user_detail' user.id %}">{{ user.username }}</a>
+                    </li>
+                    <li>
+                        {% if user.dream %}
+                        <a class="dream">{{ user.dream }}</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <!-- about website -->
+    <h2>Let`s shere your dream with people all over the world to make them more powerful!</h2>
+    <p>
+        This website allows you to see many dreams all over the world and also you can make friends with them.
+    </p>
+    <br>
+    <h2>You should take a look at how you spend a day!</h2>
+    <p>
+        If you have what you decided to do in your mind, let's keep a diary on this site so that you can see how you spend a day.
+    </p>
+    <p>
+        You can create Books and keep a diary on it. There are Private book and Public book, you can choose one of them for each book. If you choose Public book, anyone can see your Public book. and If you choose Private book, only you can see the content.
+    </p>
+    <p>
+        You do not have to keep a elaborate diary because you should take actions if you have time to write elaborate diary.
+    </p>
+    <p>
+        Let`s keep diaries and see weather you live your life you want or not.
+    </p>
+    <br>
+    <h2>Continuity is a father of success!</h2>
+    <p>
+        One of the best important things to achieve goals is to continue doing, but it is difficult for many people to keep doing what they decided to do.
+    </p>
+    <br>
+    <h2>Take action !</h2>
+    <p>
+        People who will grab their dreams have already taken actions !
+    </p>
+    <h2>I hope that you can get closer to your dream by using this site !</h2>
+    <p>I would like to get your feedback !</p>
+    <br>
+</section>
+<!-- Header End -->
+{% endblock %}

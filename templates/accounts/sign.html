@@ -1,0 +1,70 @@
+{% load static %}
+<body>
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+	    <form action="{% url 'accounts:sign' %}" method="POST">
+		    {% csrf_token %}
+			<div class="form" id="form1">
+			{% if messages %}
+			{% for message in messages %}
+			{{ message }}
+			{% endfor %}
+			{% endif %}
+		    <h2 class="form__title">Sign Up</h2>
+            <input type="text" name="username" placeholder="Username" class="input" required>
+		    <input type="email" name="email" placeholder="Email" class="input" required>
+		    <input type="password" name="password" placeholder="Password" class="input" required>
+		    <input type="password" name="confirm_password" placeholder="Password again" class="input" required>
+		    <button type="submit" class="btn">Sign Up</button>
+			</div>
+	    </form>
+	</div>
+
+	<!-- Sign In -->
+	<div class="container__form container--signin">
+	  <form action="{% url 'accounts:signin' %}" method="POST">
+		{% csrf_token %}
+		<div class="form" id="form2">
+		<h2 class="form__title">Sign In</h2>
+		<input type="email" name="email" placeholder="Email" class="input" required>
+		<input type="password" name="password" placeholder="Password" class="input" required>
+		{% comment %} <a href="#" class="link">Forgot your password?</a> {% endcomment %}
+		<button class="btn">Sign In</button>
+		</div>
+	  </form>
+	</div>
+  
+	<!-- Overlay -->
+	<div class="container__overlay">
+	  <div class="overlay">
+		<div class="overlay__panel overlay--left">
+		  <button class="btn" id="signIn">Sign In</button>
+		</div>
+		<div class="overlay__panel overlay--right">
+		  <button class="btn" id="signUp">Sign Up</button>
+		</div>
+	  </div>
+	</div>
+</div>
+</body>
+
+<script>
+const signInBtn = document.getElementById("signIn");
+const signUpBtn = document.getElementById("signUp");
+const fistForm = document.getElementById("form1");
+const secondForm = document.getElementById("form2");
+const container = document.querySelector(".container");
+
+signInBtn.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+});
+
+signUpBtn.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
+});
+
+fistForm.addEventListener("submit", (e) => e.preventDefault());
+secondForm.addEventListener("submit", (e) => e.preventDefault());
+</script>

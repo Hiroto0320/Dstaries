@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} | Diary{% endblock %}
+{% block content %}
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/content.css' %}">
+{% if contents %}
+<section>
+<h2 class="title">{{ title }}</h2>
+<h4 class="content-username">{{ title.user.username }}</h4>
+<ul class="content-ul">
+    {% for content in contents %}
+    <div class="openbook-image">
+    <img src="{% static 'css/img/open_book.png' %}" height="30" width="30">
+    </div>
+    <li>
+        <p class="date">{{ content.date|date:"Y/n/j" }}</p>
+    </li>
+    <hr>
+    <li>
+        {% if content.subtitle %}
+        <p class="subtitle">{{ content.subtitle }}</p>
+        {% endif %}
+    </li>
+    <li>
+        <p class="content">{{ content.content }}</p>
+    </li>
+    <br>
+    {% endfor %}
+</ul>
+{% else %}
+<h2>There is no diary</h2>
+{% endif %}
+</section>
+</body>
+{% endblock %}

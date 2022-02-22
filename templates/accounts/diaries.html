@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %} | Diaries{% endblock %}
+{% block content %}
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/diary.css' %}">
+{% if diaries %}
+        <ul class="diary-field">
+        {% for diary in diaries %}
+        {% if diary.user == user %}
+            <br>
+            <li>
+                <h3>{{ diary.diary_title }}</h3>
+                <h6 class="is_public">
+                    {% if diary.is_public %}
+                    <img src="{% static 'css/img/book-public.png' %}" height="24" width="24">
+                        Public
+                    {% else %}
+                    <img src="{% static 'css/img/closed_book.png' %}" height="22" width="22">
+                        Private
+                    {% endif %}
+                    book.
+                </h6>
+                <a href="{% url 'accounts:diary_content' diary.id %}" class="diary-title">
+                    Open
+                </a>
+            </li>
+        {% elif diary.is_public %}
+            <br>
+            <li>
+                <h3>{{ diary.diary_title }}</h3>
+                <a href="{% url 'accounts:diary_content' diary.id %}" class="diary-title">
+                    <img src="{% static 'css/img/book-public.png' %}" height="24" width="24">
+                    Open
+                </a>
+            </li>
+        {% else %}
+            <br>
+            <li>
+                <h3>{{ diary.diary_title }}</h3>
+                <h6 class="is_public">
+                    <img src="{% static 'css/img/closed_book.png' %}" height="22" width="22">
+                        Private
+                    book.
+                </h6>
+            </li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+{% else %}
+    <h3>There is no Book</h3>
+{% endif %}
+</body>
+{% endblock %}

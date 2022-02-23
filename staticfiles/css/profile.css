@@ -64,14 +64,14 @@
     overflow-x: hidden;
     color: #3f4159;
     border-radius: 2px;
-    width: 550px;
+    width: 650px;
     max-width: 800px;
-    height: 500px;
+    height: 540px;
     top: 30px;
   }
   @media only screen and (min-width: 500px) {
     #settings {
-      max-height: 550%;
+      max-height: 650px;
     }
   }
   

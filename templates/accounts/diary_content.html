@@ -2,15 +2,6 @@
 {% block title %} / Diary{% endblock %}
 {% block content %}
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFNQMVTL3H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RFNQMVTL3H');
-</script>
 </head>
 <body>
 {% load static %}
@@ -19,6 +10,7 @@
 <section>
 <h2 class="title">{{ title }}</h2>
 <h4 class="content-username">{{ title.user.username }}</h4>
+<a href="{% url 'accounts:profile' %}" class="to_profile">Write a diary</a>
 <ul class="content-ul">
     {% for content in contents %}
     <div class="openbook-image">

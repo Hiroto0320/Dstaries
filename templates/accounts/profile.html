@@ -2,15 +2,7 @@
 {% block title %} / Account Page{% endblock %}
 {% block content %}
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFNQMVTL3H"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-RFNQMVTL3H');
-</script>
+  
 </head>
 {% load static %}
 
@@ -20,10 +12,10 @@ gtag('config', 'G-RFNQMVTL3H');
     <span class="nav">Edit profile</span>
     <input class="nav" name="nav" type="radio"></input>
     <span class="nav">Keep a diary</span>
-    <input class="nav" name="nav" type="radio"></input>
+    {% comment %} <input class="nav" name="nav" type="radio"></input>
     <span class="nav">Edit books</span>
     <input class="nav" name="nav" type="radio"></input>
-    <span class="nav">Coming soon..</span>
+    <span class="nav">Coming soon..</span> {% endcomment %}
     <main class="content">
       <section id="profile">
         <form method="POST" enctype="multipart/form-data">
@@ -183,7 +175,7 @@ gtag('config', 'G-RFNQMVTL3H');
           </ul>
         </form>
       </section>
-      <section class="upcoming" id="advanced">
+      {% comment %} <section class="upcoming" id="advanced">
         <form action="{% url 'accounts:profile' %}" method="POST">
           {% csrf_token %}
           <ul>
@@ -243,7 +235,7 @@ gtag('config', 'G-RFNQMVTL3H');
       </section>
       <section class="upcoming" id="createNewBook">
         <h1>Coming&nbsp;soon!</h1>
-      </section>
+      </section> {% endcomment %}
 
     </main>
 </div>

@@ -5,20 +5,11 @@
 <head>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFNQMVTL3H"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RFNQMVTL3H');
-    </script>
 </head>
 <header>
     <div class="headline">
         <div class="inner">
-            <h1>Dreamers</h1>
+            <h1>D-Stories</h1>
             {% if user.is_authenticated %}
             <p>welcome {{ user.username }}! </p>
             {% else %}

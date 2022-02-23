@@ -103,7 +103,7 @@ def profile(request):
             user=request.user,
             content=request.POST.get('content'),
             subtitle=request.POST.get('diary-subtitle'),
-        )
+            )
         User.objects.filter(email=request.user.email).update(
             Actively_point=DiaryContent.objects.filter(user=request.user).count()
         )

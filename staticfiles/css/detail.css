@@ -50,14 +50,14 @@
     overflow-y: scroll;
     color: #3f4159;
     border-radius: 2px;
-    width: 50%;
-    max-width: 100%;
+    width: 650px;
+    max-width: 1000px;
     height: 90%;
     top: 20px;
   }
   @media only screen and (min-width: 500px) {
     #settings {
-      max-height: 100%;
+      max-height: 750px;
     }
   }
 

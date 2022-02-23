@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
 <!-- Header Start -->
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFNQMVTL3H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFNQMVTL3H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-RFNQMVTL3H');
-</script>
+    gtag('config', 'G-RFNQMVTL3H');
+    </script>
 </head>
 <header>
     <div class="headline">
@@ -59,7 +60,7 @@
     <!-- about website -->
     <h2>Let`s shere your dream with people all over the world to make them more powerful!</h2>
     <p>
-        This website allows you to see many dreams all over the world and also you can make friends with them.
+        This website allows you to see many dreams all over the world and also you can make friends with them. We can get inspired each other!
     </p>
     <br>
     <h2>You should take a look at how you spend a day!</h2>
@@ -83,11 +84,8 @@
     <br>
     <h2>Take action !</h2>
     <p>
-        People who will grab their dreams have already taken actions !
+        People who will grab their dreams have already taken actions! Let's take action and write your action on your books so that you can see how you moved forward!
     </p>
-    <h2>I hope that you can get closer to your dream by using this site !</h2>
-    <p>I would like to get your feedback !</p>
-    <br>
 </section>
 <!-- Header End -->
 {% endblock %}

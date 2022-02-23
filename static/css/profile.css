@@ -303,6 +303,7 @@
     font-weight: 500;
     color: #cd908b;
     line-height: 1.5;
+    font-size: small;
   }
   .material hr {
     display: block;
@@ -347,7 +348,6 @@
   }
   .material input:focus + label, .material input:valid + label {
     transform: translateY(-24px) translateZ(0);
-    font-size: 12px;
   }
   .material input:focus ~ hr:after {
     transform: scaleX(1) translateZ(0);
@@ -594,6 +594,10 @@
   
   .is_public-label {
     float: left;
+  }
+
+  .None-option {
+    opacity: 0.8;
   }
   
   @keyframes rotateIn {

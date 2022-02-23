@@ -12,7 +12,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     image = models.FileField(upload_to='pictures/', null=True)
     joined_date = models.DateField(auto_now_add=True)
-    introduction = models.CharField(max_length=400, blank=True)
+    introduction = models.CharField(max_length=450, blank=True)
     dream = models.CharField(max_length=255, blank=True)
     task = models.CharField(max_length=255, blank=True)
     website = models.URLField(blank=True)

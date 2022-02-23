@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
-{% block title %} | Diary{% endblock %}
+{% block title %} / Diary{% endblock %}
 {% block content %}
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFNQMVTL3H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RFNQMVTL3H');
+</script>
+</head>
 <body>
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/content.css' %}">

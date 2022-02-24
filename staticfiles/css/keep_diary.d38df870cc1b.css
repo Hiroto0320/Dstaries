@@ -22,8 +22,8 @@
     justify-content: center;
     padding: 12px;
     margin: 0;
-    background: #936e76;
-    background: linear-gradient(135deg, #3f4159 0%, #725767 50%, #cd908b 100%);
+    background: #936e6e;
+    background: linear-gradient(135deg, whitesmoke 0%, #daa520 60%, #ffa500 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$mauve", endColorstr="$blush",GradientType=1 );
     font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
@@ -37,17 +37,13 @@
     font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     resize: none;
   }
-
-  #image-clear_id {
-    appearance: none;
-  }
   
   a, button, input[type=submit] {
     cursor: pointer;
   }
 
   ::selection {
-    background: rgba(205, 144, 139, 0.2);
+    background: #ffa500;
   }
   
   #settings {
@@ -90,15 +86,7 @@
   span.nav:nth-of-type(2) {
     z-index: 4;
   }
-  /* span.nav:nth-of-type(3) {
-    z-index: 3;
-  }
-  span.nav:nth-of-type(4) {
-    z-index: 2;
-  }
-  span.nav:nth-of-type(5) {
-    z-index: 1;
-  } */
+
   span.nav:after {
     content: "";
     display: block;
@@ -404,7 +392,7 @@
     height: 100%;
   }
   .material-checkbox input:checked + div span {
-    background: #cd908b;
+    background: #ffa500;
   }
   .material-checkbox input:checked + div g:last-child line {
     opacity: 1;
@@ -452,7 +440,7 @@
     background: #cd908b;
   }
   .material-button button.save:active, .material-button input[type=submit].save:active {
-    background: #3f4159;
+    background: #ff6600;
   }
   @media only screen and (max-height: 444px) {
     .material-button button.save, .material-button input[type=submit].save {
@@ -538,20 +526,6 @@
     justify-content: center;
   }
 
-  .icon {
-    height: 60px;
-    width: 60px;
-    border-radius: 20px;
-  }
-
-  .image-form label {
-    display: none;
-  }
-
-  .image-form {
-    text-overflow: var(white);
-  }
-
   .filelabel{
     display: inline-block;
     position: relative;
@@ -590,46 +564,6 @@
   
   .is_public-label {
     float: left;
-  }
-
-  .material_account label {
-    transition: all 150ms ease-out;
-    will-change: transform;
-    transform: translateZ(0);
-    display: block;
-    position: relative;
-    z-index: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-bottom: 4px;
-    font-weight: 500;
-    color: #20b2aa;
-    opacity: 0.5;
-    line-height: 1.5;
-    text-align: right;
-  }
-
-  .material_account {
-    padding: 0 10px;
-  }
-
-  .account-info-p {
-    font-size: large;
-    margin: 10 5 0 5;
-  }
-
-  .material_account hr {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    border: 0;
-    border-radius: 4px;
-    margin: 0;
-    background: #ebebeb;
   }
 
   

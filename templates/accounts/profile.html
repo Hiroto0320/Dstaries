@@ -11,11 +11,7 @@
     <input checked="<%= true %>" class="nav" name="nav" type="radio"></input>
     <span class="nav">Edit profile</span>
     <input class="nav" name="nav" type="radio"></input>
-    <span class="nav">Keep a diary</span>
-    {% comment %} <input class="nav" name="nav" type="radio"></input>
-    <span class="nav">Edit books</span>
-    <input class="nav" name="nav" type="radio"></input>
-    <span class="nav">Coming soon..</span> {% endcomment %}
+    <span class="nav">Account info</span>
     <main class="content">
       <section id="profile">
         <form method="POST" enctype="multipart/form-data">
@@ -24,30 +20,7 @@
             <li class="large padding avatar">
               <img class="icon" {% if user.image %} src="{{ user.image.url }}" {% endif %}>
               <div>
-                {% comment %} <fieldset class="material-checkbox">
                   <div>
-                    <input checked="<%= true %>" type="checkbox"></input>
-                    <div class="check">
-                      <span>
-                        <svg viewBox="0 0 24 24">
-                          <g>
-                            <line x1="4.5" x2="9.24" y1="12.5" y2="17.24"></line>
-                            <line x1="9.24" x2="19.76" y1="17.24" y2="6.73"></line>
-                          </g>
-                          <g>
-                            <line x1="4.5" x2="9.24" y1="12.5" y2="17.24"></line>
-                            <line x1="9.24" x2="19.76" y1="17.24" y2="6.73"></line>
-                          </g>
-                        </svg>
-                      </span>
-                      <label>Use Gravatar</label>
-                    </div>
-                  </div>
-                </fieldset>
-                <input class="material-button"> {% endcomment %}
-                  <div>
-                    {% comment %} <label for="file" class="filelabel">select image</label>
-                    <input type="file" name="image" id="file" class="fileinput"></input> {% endcomment %}
                     <p class="image-form">{{ form }}<p>
                   </div>
               </div>
@@ -55,7 +28,7 @@
             <li>
               <fieldset class="material">
                 <div>
-                  <input type="text" value="{{ user.username }}" name="username" required></input>
+                  <input type="text" value="{{ user.username }}" name="username"></input>
                   <label>Uesrname</label>
                   <hr/>
                 </div>
@@ -130,7 +103,78 @@
           </ul>
         </form>
       </section>
+
       <section id="account">
+        <ul>
+          <li>
+            <img class="icon" {% if user.image %} src="{{ user.image.url }}"{% else %}src="{% static 'css/img/default.jpg' %}" {% endif %}>
+          </li>
+          <li>
+            <fieldset class="material_account">
+              <div>
+                <p class="account-info-p">{{ user.email }}</p>
+                <label>Email</label>
+                <hr/>
+              </div>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset class="material_account">
+              <div>
+                <p class="account-info-p">{{ user.username }}</p>
+                <label>Username</label>
+                <hr/>
+              </div>
+            </fieldset>
+          </li>
+          <li>
+            {% if user.dream %}
+            <fieldset class="material_account">
+              <div>
+                <p class="account-info-p">{{ user.country }}</p>
+                <label>Country</label>
+                <hr/>
+              </div>
+            </fieldset>
+            {% endif %}
+          </li>
+          <li>
+            {% if user.dream %}
+            <fieldset class="material_account">
+              <div>
+                <p class="account-info-p">{{ user.dream }}</p>
+                <label>Dream</label>
+                <hr/>
+              </div>
+            </fieldset>
+            {% endif %}
+          </li>
+          <li>
+            {% if user.task %}
+            <fieldset class="material_account">
+              <div>
+                <p class="account-info-p">{{ user.task }}</p>
+                  <label>My Task</label>
+                <hr/>
+              </div>
+            </fieldset>
+            {% endif %}
+          </li>
+
+          {% if user.introduction %}
+          <li class="large">
+            <fieldset class="material_account">
+              <div>
+                <p class="account-info-p">{{ user.introduction | linebreaksbr }}</p>
+                <label>About me</label>
+                <hr/>
+              </div>
+            </fieldset>
+            {% endif %}
+          </li>
+        </ul>
+      </section>
+      {% comment %} <section id="account">
         <form action="{% url 'accounts:profile' %}" method="POST">
           {% csrf_token %}
           <ul>
@@ -174,7 +218,7 @@
             </li>
           </ul>
         </form>
-      </section>
+      </section> {% endcomment %}
       {% comment %} <section class="upcoming" id="advanced">
         <form action="{% url 'accounts:profile' %}" method="POST">
           {% csrf_token %}

@@ -62,8 +62,6 @@ def signout(request):
 @login_required(login_url='accounts:sign')
 def profile(request):
     form = forms.ImageForm(request.POST or None, request.FILES or None, instance=request.user)
-    diary_title = DiaryTitle.objects.filter(user=request.user)
-    contents = DiaryContent.objects.filter(user=request.user)
     if request.method == "POST":
         if request.POST.get('username'):
             if form.is_valid():
@@ -77,41 +75,12 @@ def profile(request):
             website=request.POST.get('website'),
             is_public=request.POST.get('is_public-account'),
             )
-        if request.POST.get('create_diary-title'):
-            if not DiaryTitle.objects.filter(user=request.user, diary_title=request.POST.get('create_diary-title')).exists():
-                if request.POST.get('is_public') == 'False':
-                    DiaryTitle.objects.filter(user=request.user).create(
-                        diary_title=request.POST.get('create_diary-title'),
-                        user=request.user,
-                        is_public=request.POST.get('is_public'),
-                    )
-                else:
-                    DiaryTitle.objects.filter(user=request.user).create(
-                        diary_title=request.POST.get('create_diary-title'),
-                        user=request.user,
-                    )
-        if request.POST.get('delete_diary-title'):
-            DiaryTitle.objects.filter(user=request.user, diary_title=request.POST.get('delete_diary-title')).delete()
-
-        if request.POST.get('delete_diary-content'):
-            DiaryContent.objects.filter(id=request.POST.get('delete_diary-content'), user=request.user).delete()
-
-        if request.POST.get('diary-title'):
-            title = diary_title.get(diary_title=request.POST.get('diary-title'))
-            DiaryContent.objects.filter(user=request.user).create(
-            diary_title=title,
-            user=request.user,
-            content=request.POST.get('content'),
-            subtitle=request.POST.get('diary-subtitle'),
-            )
         User.objects.filter(email=request.user.email).update(
             Actively_point=DiaryContent.objects.filter(user=request.user).count()
         )
         return redirect('accounts:profile')
     return render(request, 'accounts/profile.html', context={
         'form':form,
-        'diary_title':diary_title,
-        'contents':contents,
     })
 
 @login_required(login_url='accounts:sign')
@@ -143,3 +112,44 @@ def diary_content(request, diary_id):
         return render(request, 'accounts/diary_content.html', data)
     else:
         return redirect('dreams:home')
+
+
+@login_required(login_url='accounts:sign')
+def keep_diary(request):
+    diaries = DiaryTitle.objects.filter(user=request.user)
+    contents = DiaryContent.objects.filter(user=request.user)
+    if request.method == 'POST':
+        if request.POST.get('create_diary-title'):
+            if not DiaryTitle.objects.filter(user=request.user, diary_title=request.POST.get('create_diary-title')).exists():
+                DiaryTitle.objects.filter(user=request.user).create(
+                    diary_title=request.POST.get('create_diary-title'),
+                    user=request.user,
+                    is_public=request.POST.get('is_public'),
+                )
+            return redirect('accounts:keep_diary')
+        if request.POST.get('delete_diary-title'):
+            DiaryTitle.objects.filter(user=request.user, diary_title=request.POST.get('delete_diary-title')).delete()
+            return redirect('accounts:keep_diary')
+
+        if request.POST.get('delete_diary-content'):
+            DiaryContent.objects.filter(id=request.POST.get('delete_diary-content'), user=request.user).delete()
+            return redirect('accounts:keep_diary')
+
+        if request.POST.get('diary-title'):
+            title = diaries.get(diary_title=request.POST.get('diary-title'))
+            DiaryContent.objects.filter(user=request.user).create(
+                diary_title=title,
+                user=request.user,
+                content=request.POST.get('content'),
+                subtitle=request.POST.get('diary-subtitle'),
+            )
+        User.objects.filter(email=request.user.email).update(
+        Actively_point=DiaryContent.objects.filter(user=request.user).count()
+        )
+        return render(request, 'accounts/diaries.html', context={
+            'diaries':diaries,
+        })
+    return render(request, 'accounts/keep_diary.html', context={
+        'diaries': diaries,
+        'contents': contents,
+    })

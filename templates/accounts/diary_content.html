@@ -10,7 +10,6 @@
 <section>
 <h2 class="title">{{ title }}</h2>
 <h4 class="content-username">{{ title.user.username }}</h4>
-<a href="{% url 'accounts:profile' %}" class="to_profile">Write a diary</a>
 <ul class="content-ul">
     {% for content in contents %}
     <div class="openbook-image">

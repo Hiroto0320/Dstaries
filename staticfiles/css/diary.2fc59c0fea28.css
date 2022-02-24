@@ -28,4 +28,5 @@ h3 {
   font-size: large;
   float: right;
   margin: 50px;
+  position: fixed;
 }

@@ -11,4 +11,5 @@ urlpatterns = [
     path('user_detail/<int:id>', views.user_detail, name='user_detail'),
     path('diary/<int:id>', views.diary, name='diary'),
     path('diary_content/<int:diary_id>', views.diary_content, name='diary_content'),
+    path('keep_diary/', views.keep_diary, name='keep_diary'),
 ]

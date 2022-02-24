@@ -7,6 +7,11 @@
 <body>
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/diary.css' %}">
+{% for diary in diaries|slice:":1" %}
+{% if diary.user == user %}
+<a href="{% url 'accounts:keep_diary' %}" class="keep_diary-url">keep_diary</a>
+{% endif %}
+{% endfor %}
 {% if diaries %}
         <ul class="diary-field">
         {% for diary in diaries %}

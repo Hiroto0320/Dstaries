@@ -3,6 +3,15 @@
 {% block content %}
 {% load static %}
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXZV2S9F5C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZXZV2S9F5C');
+</script>
 </head>
 <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 <body>
@@ -17,9 +26,6 @@
           <a href="{% url 'accounts:diary' user_detail.id %}" class="diary">
             <img src="{% static 'css/img/cloud-304979__480-removebg-preview.png' %}" height="70px" width="100px" class="diary-hukidashi">
           </a>
-          {% comment %} <a href="{% url 'direct_messages:direct_message' user.id user_detail.id %}" class="direct message">
-            <img src="{% static 'css/hukidashi.png' %}" height="40" width="60">
-          </a> {% endcomment %}
         </li>
         <li>
           {% if user_detail.dream %}
@@ -42,26 +48,6 @@
             </div>
           </fieldset>
           {% endif %}
-        </li>
-        <li>
-          {% comment %} {% if user_detail.twitter_link %}
-          <fieldset class="material-link">
-            <div>
-              <a href="{{ user_detail.twitter_link }}">Follow my twitter</a>
-              <hr/>
-            </div>
-          </fieldset>
-          {% endif %}
-        </li>
-        <li>
-          {% if user_detail.facebook_link %}
-          <fieldset class="material-link">
-            <div>
-              <a href="{{ user_detail.facebook_link }}">Follow my facebook</a>
-              <hr/>
-            </div>
-          </fieldset>
-          {% endif %} {% endcomment %}
         </li>
         {% if user_detail.introduction %}
         <li class="large">

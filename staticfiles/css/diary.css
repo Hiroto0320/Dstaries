@@ -25,7 +25,14 @@ h3 {
 }
 
 .keep_diary-url {
-  font-size: large;
+  font-size: x-large;
   float: right;
   margin: 50px;
+  color: black;
+}
+
+.no-diary {
+  font-size: x-large;
+  margin: 50px;
+  color: black;
 }

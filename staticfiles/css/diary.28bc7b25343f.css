@@ -31,8 +31,9 @@ h3 {
   color: black;
 }
 
-.no-diary {
+.none-diary {
   font-size: x-large;
+  float: right;
   margin: 50px;
   color: black;
 }

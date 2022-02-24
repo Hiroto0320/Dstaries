@@ -17,7 +17,10 @@
 <link rel="stylesheet" href="{% static 'css/diary.css' %}">
 {% for diary in diaries|slice:":1" %}
 {% if diary.user == user %}
-<a href="{% url 'accounts:keep_diary' %}" class="keep_diary-url">keep_diary</a>
+<a href="{% url 'accounts:keep_diary' %}" class="keep_diary-url">
+    Write
+    <img src="{% static 'css/img/quill.png' %}" height="30" width="30">
+</a>
 {% endif %}
 {% endfor %}
 {% if diaries %}
@@ -64,7 +67,7 @@
         {% endfor %}
         </ul>
 {% else %}
-    <h3>There is no Book</h3>
+    <h3 class="no-diary">There is no Book</h3>
 {% endif %}
 </body>
 {% endblock %}

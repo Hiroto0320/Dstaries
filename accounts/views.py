@@ -126,14 +126,11 @@ def keep_diary(request):
                     user=request.user,
                     is_public=request.POST.get('is_public'),
                 )
-            return redirect('accounts:keep_diary')
         if request.POST.get('delete_diary-title'):
             DiaryTitle.objects.filter(user=request.user, diary_title=request.POST.get('delete_diary-title')).delete()
-            return redirect('accounts:keep_diary')
 
         if request.POST.get('delete_diary-content'):
             DiaryContent.objects.filter(id=request.POST.get('delete_diary-content'), user=request.user).delete()
-            return redirect('accounts:keep_diary')
 
         if request.POST.get('diary-title'):
             title = diaries.get(diary_title=request.POST.get('diary-title'))
@@ -146,9 +143,7 @@ def keep_diary(request):
         User.objects.filter(email=request.user.email).update(
         Actively_point=DiaryContent.objects.filter(user=request.user).count()
         )
-        return render(request, 'accounts/diaries.html', context={
-            'diaries':diaries,
-        })
+        return redirect('accounts:keep_diary')
     return render(request, 'accounts/keep_diary.html', context={
         'diaries': diaries,
         'contents': contents,

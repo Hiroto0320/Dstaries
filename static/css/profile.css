@@ -348,6 +348,12 @@
   .material input:focus ~ hr:after {
     transform: scaleX(1) translateZ(0);
   }
+  .material textarea:focus + label, .material textarea:valid + label {
+    transform: translateY(-24px) translateZ(0);
+  }
+  .material textarea:focus ~ hr:after {
+    transform: scaleX(1) translateZ(0);
+  }
   
   .material-checkbox div {
     position: relative;
@@ -571,7 +577,7 @@
   }
 
   .about-text, .diary-content {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
   }
 
   select {
@@ -587,6 +593,10 @@
     text-align: left;
     padding-left: 5%;
     }
+
+  .about-label {
+    margin-bottom: -20px;
+  }
   
   .is_public-label {
     float: left;

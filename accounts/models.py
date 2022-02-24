@@ -45,7 +45,7 @@ class DiaryContent(models.Model):
         'User', on_delete=models.CASCADE)
     diary_title = models.ForeignKey(
         'DiaryTitle', on_delete=models.CASCADE)
-    content = models.CharField(max_length=700, blank=False)
+    content = models.CharField(max_length=700, blank=True)
     subtitle = models.CharField(max_length=100, blank=True)
     date = models.DateTimeField(auto_now_add=True)
 

@@ -50,7 +50,7 @@
             <li class="large">
               <fieldset class="material">
                 <div>
-                  <textarea name="content" cols="70" rows="5" class="diary-content" placeholder="Write content here" maxlength="700" required></textarea>
+                  <textarea name="content" cols="70" rows="5" class="diary-content" placeholder="Write content here" maxlength="700"></textarea>
                   <label class="diary-label">Content</label>
                   <hr/>
                 </div>
@@ -89,7 +89,7 @@
             </li>
             <li class="large padding" >
               <fieldset class="material">
-                <div>
+                <div class="delete-book">
                   <select name="delete_diary-title">
                     <option value="" disabled selected style="display:none;" class="None-option">You can delete Books here.</option>
                     {% for title in diaries %}
@@ -102,7 +102,7 @@
             </li>
             <li class="large padding">
               <fieldset class="material">
-                <div>
+                <div class="delete-content">
                   <select name="delete_diary-content">
                     <option value="" selected class="None-option" class="None-option">You can delete contents in your books here.</option>
                     <option value="">Title : Subtitle</option>

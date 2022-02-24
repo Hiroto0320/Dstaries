@@ -113,7 +113,6 @@ def diary_content(request, diary_id):
     else:
         return redirect('dreams:home')
 
-
 @login_required(login_url='accounts:sign')
 def keep_diary(request):
     diaries = DiaryTitle.objects.filter(user=request.user)

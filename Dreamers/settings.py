@@ -163,17 +163,25 @@ AUTH_USER_MODEL = 'accounts.User'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #cloudinary settings
-import environ
-import os
+# import environ
+# import os
 
-env = environ.Env()
-env.read_env(os.path.join(BASE_DIR, '.env'))
+# env = environ.Env()
+# env.read_env(os.path.join(BASE_DIR, '.env'))
 
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# MEDIA_URL = '/media/'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': env('CLOUDINARY_NAME'),
+#     'API_KEY': env('CLOUDINARY_API_KEY'),
+#     'API_SECRET': env('CLOUDINARY_API_SECRET'),
+# }
+
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': env('CLOUDINARY_NAME'),
-    'API_KEY': env('CLOUDINARY_API_KEY'),
-    'API_SECRET': env('CLOUDINARY_API_SECRET'),
+'CLOUD_NAME': 'hmzq68sig',
+'API_KEY': '135492528419275',
+'API_SECRET': 'jPVvfv--09s4H1f4rwSZECaJwDE'
 }
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

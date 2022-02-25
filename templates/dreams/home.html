@@ -28,7 +28,7 @@
     </div>
 </header>
 <section>
-    {% if user.is_authenticated %}
+    {% comment %} {% if user.is_authenticated %} {% endcomment %}
         <h2>Active users!</h2>
         <h3>Users who are keeping a diary frequently.</h3>
         {% for user in users|slice:":3" %}
@@ -52,7 +52,7 @@
                 </ul>
             {% endif %}
         {% endfor %}
-    {% endif %}
+    {% comment %} {% endif %} {% endcomment %}
     <!-- about website -->
     <h2>Let`s shere your dream with people all over the world and get inspired each other !</h2>
     <p>

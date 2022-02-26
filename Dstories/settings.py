@@ -59,7 +59,7 @@ MIDDLEWARE = [
 #Active Django-Heroku
 django_heroku.settings(locals())
 
-ROOT_URLCONF = 'Dreamers.urls'
+ROOT_URLCONF = 'Dstories.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Dreamers.wsgi.application'
+WSGI_APPLICATION = 'Dstories.wsgi.application'
 
 
 # Database

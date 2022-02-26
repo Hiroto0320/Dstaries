@@ -35,8 +35,8 @@
             {% if user.is_public %}
                 <ul>
                     <li>
-                        {% if user.image %}
-                            <img src="{{ user.image.url }}" height="80px" width="80px" style="border-radius: 8px;">
+                        {% if user.icon %}
+                            <img src="{{ user.icon.url }}" height="80px" width="80px" style="border-radius: 8px;">
                         {% else %}
                             <img src="{% static 'css/img/default.jpg' %}" height="80px" width="80px" style="border-radius: 8px;">
                         {% endif %}

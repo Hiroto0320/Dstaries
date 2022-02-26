@@ -49,6 +49,17 @@
           </fieldset>
           {% endif %}
         </li>
+        <li>
+          {% if user_detail.favorite %}
+          <fieldset class="material">
+            <div>
+              <p>{{ user_detail.favorite }}</p>
+                <label>My favorite</label>
+              <hr/>
+            </div>
+          </fieldset>
+          {% endif %}
+        </li>
         {% if user_detail.introduction %}
         <li class="large">
           <fieldset class="material">

@@ -177,6 +177,7 @@
     width: 100%;
     font-size: 15px;
     border-radius: 20px;
+    padding: 0px 10px;
   }
   .material div {
     position: relative;

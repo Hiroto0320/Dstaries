@@ -68,7 +68,7 @@ def profile(request):
                 form.save(commit=True)
             User.objects.filter(username=request.user.username, email=request.user.email).update(
             username=request.POST.get('username'),
-            country=request.POST.get('country'),
+            favorite=request.POST.get('favorite'),
             task=request.POST.get('task'),
             dream=request.POST.get('dream'),
             introduction=request.POST.get('about'),

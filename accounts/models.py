@@ -2,12 +2,11 @@ from django.db import models
 from django.contrib.auth.models import (
     AbstractBaseUser, PermissionsMixin, UserManager
 )
-from django.utils import timezone
 # Create your models here.
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, unique=True)
-    country = models.CharField(max_length=100, blank=True)
+    favorite = models.CharField(max_length=100, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     icon = models.FileField(upload_to='icons/', null=True)

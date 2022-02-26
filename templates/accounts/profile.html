@@ -45,8 +45,8 @@
             <li>
               <fieldset class="material">
                 <div>
-                  <input type="text" value="{% if user.country %}{{ user.country }}{% endif %}" name="country"></input>
-                  <label>Your country</label>
+                  <input type="text" value="{% if user.favorite %}{{ user.favorite }}{% endif %}" name="favorite"></input>
+                  <label>Favorite things</label>
                   <hr/>
                 </div>
               </fieldset>
@@ -72,7 +72,7 @@
             <li class="large">
               <fieldset class="material">
                 <div>
-                  <textarea name="about" cols="90" rows="5" class="about-text" maxlength="400">{% if user.introduction %}{{ user.introduction }}{% endif %}</textarea>
+                  <textarea name="about" cols="90" rows="5" class="about-text" maxlength="450">{% if user.introduction %}{{ user.introduction }}{% endif %}</textarea>
                   <label class="about-label">About you</label>
                   <hr/>
                 </div>
@@ -140,8 +140,8 @@
             {% if user.dream %}
             <fieldset class="material_account">
               <div>
-                <p class="account-info-p">{{ user.country }}</p>
-                <label>Country</label>
+                <p class="account-info-p">{{ user.favorite }}</p>
+                <label>Favorite things</label>
                 <hr/>
               </div>
             </fieldset>

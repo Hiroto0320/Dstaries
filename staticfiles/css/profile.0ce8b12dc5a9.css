@@ -38,7 +38,7 @@
     resize: none;
   }
 
-  #icon-clear_id {
+  #image-clear_id {
     appearance: none;
   }
   
@@ -69,7 +69,6 @@
     height: 540px;
     top: 30px;
   }
-  
   @media only screen and (min-width: 500px) {
     #settings {
       max-height: 640px;

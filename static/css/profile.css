@@ -550,11 +550,11 @@
     border-radius: 20px;
   }
 
-  .image-form label {
+  .icon-form label {
     display: none;
   }
 
-  .image-form {
+  .icon-form {
     text-overflow: var(white);
   }
 

@@ -10,7 +10,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     country = models.CharField(max_length=100, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
-    image = models.FileField(upload_to='pictures/', null=True)
+    icon = models.FileField(upload_to='icons/', null=True)
     joined_date = models.DateField(auto_now_add=True)
     introduction = models.CharField(max_length=450, blank=True)
     dream = models.CharField(max_length=255, blank=True)

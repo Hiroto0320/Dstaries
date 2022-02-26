@@ -18,7 +18,7 @@
 <section id="settings">
       <ul>
         <li class="large padding avatar">
-          <img class="icon" {% if user_detail.image %} src="{{ user_detail.image.url }}"{% else %}src="{% static 'css/img/default.jpg' %}" {% endif %}>
+          <img class="icon" {% if user_detail.icon %} src="{{ user_detail.icon.url }}"{% else %}src="{% static 'css/img/default.jpg' %}" {% endif %}>
           <p class="username">{{ user_detail.username }}</p>
           <a href="{{ user_detail.website }}" class="website" target="_blank">
             <img src="{% static 'css/img/cloud-website-removebg-preview.png' %}" height="70px" width="100px" class="website-hukidashi">

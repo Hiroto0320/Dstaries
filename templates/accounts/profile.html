@@ -26,10 +26,10 @@
           {% csrf_token %}
           <ul>
             <li class="large padding avatar">
-              <img class="icon" {% if user.image %} src="{{ user.image.url }}" {% endif %}>
+              <img class="icon" {% if user.icon %} src="{{ user.icon.url }}" {% endif %}>
               <div>
                   <div>
-                    <p class="image-form">{{ form }}<p>
+                    <p class="icon-form">{{ form }}<p>
                   </div>
               </div>
             </li>
@@ -116,7 +116,7 @@
       <section id="account">
         <ul>
           <li>
-            <img class="icon" {% if user.image %} src="{{ user.image.url }}"{% else %}src="{% static 'css/img/default.jpg' %}" {% endif %}>
+            <img class="icon" {% if user.icon %} src="{{ user.icon.url }}"{% else %}src="{% static 'css/img/default.jpg' %}" {% endif %}>
           </li>
           <li>
             <fieldset class="material_account">

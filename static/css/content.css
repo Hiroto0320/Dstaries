@@ -10,6 +10,7 @@
     margin-top: 0;
     font-family: cursive;
     float: right;
+    margin-bottom: 5px;
 }
 
 .title {
@@ -55,3 +56,36 @@ section {
 .openbook-image {
     float: right;
 }
+
+#good-a {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    border-radius: 0.5rem;
+    /* border: 2px solid black; */
+    /* background: #fff; */
+    color: black;
+    text-align: center;
+  }
+
+#good-a:active {
+    opacity: 0;
+}
+
+#good-a:hover {
+    color: black;
+    background: whitesmoke;
+ }

@@ -11,6 +11,27 @@
 
   gtag('config', 'G-ZXZV2S9F5C');
 </script>
+<!-- Ajax -->
+<script>
+    window.onload = function() {
+        document.getElementById("good_count").innerText = {{ title.goodstamp }}
+    }
+
+    function api_good() {
+        var api_url = "{% url 'accounts:api_good' title.id %}";
+        var btn = document.getElementById("good_count");
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState === 4 && request.status === 200) {
+                var received_data = JSON.parse(request.responseText);
+                btn.innerText = received_data.goodstamp;
+                document.getElementById("good-a").removeAttribute( "onclick" );
+            }
+        }
+        request.open("GET", api_url);
+        request.send()
+    }
+</script>
 </head>
 <body>
 {% load static %}
@@ -19,6 +40,13 @@
 <section>
 <h2 class="title">{{ title }}</h2>
 <h4 class="content-username">{{ title.user.username }}</h4>
+<div class="good-frame">
+<a id="good-a" onclick="api_good()">
+    <img src="{% static 'css/img/cheer.png' %}" height="30px" width="30px" alt="no image" class="cheer-image">
+    <span id="good_count"></span>
+    <p class="good-p">Cheer up!</p>
+</a>
+</div>
 <ul class="content-ul">
     {% for content in contents %}
     <div class="openbook-image">

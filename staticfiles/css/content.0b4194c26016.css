@@ -10,7 +10,6 @@
     margin-top: 0;
     font-family: cursive;
     float: right;
-    margin-bottom: 5px;
 }
 
 .title {
@@ -75,14 +74,14 @@ section {
     text-decoration: none;
     letter-spacing: 0.1em;
     border-radius: 0.5rem;
-    /* border: 2px solid black; */
-    /* background: #fff; */
-    color: black;
+    border: 2px solid #c50000;
+    border-radius: 0;
+    background: #fff;
+    color: #c50000;
     text-align: center;
-    background-image: url('./img/cheer.png');
   }
 
-  #good-a:active {
-    color: black;
-    background: whitesmoke;
+  #good-a:hover {
+    color: #fff;
+    background: #c50000;
   }

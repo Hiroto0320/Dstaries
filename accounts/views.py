@@ -5,6 +5,8 @@ from django.contrib.auth.password_validation import validate_password
 from .models import User, DiaryTitle, DiaryContent
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
+from django.http import Http404
+from django.http.response import JsonResponse
 
 app_name = 'accounts'
 
@@ -12,48 +14,45 @@ app_name = 'accounts'
 
 def sign(request):
     if request.method == 'POST':
-        print('method is post')
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-        confirm_password = request.POST['confirm_password']
-        if password==confirm_password:
-            try:
-                validate_password(password)
-            except ValidationError as error:
-                messages.error(request, 'weak password')
-                return redirect('accounts:sign')
-            if User.objects.filter(username=username).exists():
-                messages.error(request, 'this username has already exists')
-                return redirect('accounts:sign')
-            elif User.objects.filter(email=email).exists():
-                messages.error(request, 'this email has already exists')
-                return redirect('accounts:sign')
+        if request.POST.get('username') and request.POST.get('confirm_password'):
+            username = request.POST['username']
+            email = request.POST['email']
+            password = request.POST['password']
+            confirm_password = request.POST['confirm_password']
+            if password==confirm_password:
+                try:
+                    validate_password(password)
+                except ValidationError as error:
+                    messages.error(request, 'weak password')
+                    return redirect('accounts:sign')
+                if User.objects.filter(username=username).exists():
+                    messages.error(request, 'this username has already exists')
+                    return redirect('accounts:sign')
+                elif User.objects.filter(email=email).exists():
+                    messages.error(request, 'this email has already exists')
+                    return redirect('accounts:sign')
+                else:
+                    user = User.objects.create_user(username=username, email=email, password=password)
+                    user.save()
+                    auth.login(request, user)
+                    return redirect('accounts:profile')
+            
             else:
-                user = User.objects.create_user(username=username, email=email, password=password)
-                user.save()
-                auth.login(request, user)
-                return redirect('accounts:profile')
-        
+                messages.error(request, 'password does not match')
+                return redirect('accounts:sign')
+
         else:
-            messages.error(request, 'password does not match')
-            return redirect('accounts:sign')
+            email = request.POST['email']
+            password = request.POST['password']
+            user =auth.authenticate(email=email, password=password)
+            if user:
+                auth.login(request, user)
+                return redirect('dreams:home')
+            else:
+                messages.error(request, 'Invalid login credentials')
+                return redirect('accounts:sign')
     else:
         return render(request, 'accounts/sign.html')
-
-def signin(request):
-    if request.method == 'POST':
-        email = request.POST['email']
-        password = request.POST['password']
-
-        user =auth.authenticate(email=email, password=password)
-        if user is not None:
-            auth.login(request, user)
-            return redirect('dreams:home')
-        else:
-            messages.error(request, 'Invalid login credentials')
-            return redirect('accounts:sign')
-    return render(request, 'accounts/sign.html')
 
 def signout(request):
     auth.logout(request)
@@ -93,7 +92,7 @@ def user_detail(request, id):
 
 @login_required(login_url='accounts:sign')
 def diary(request, id):
-    diaries = DiaryTitle.objects.filter(user=id)
+    diaries = DiaryTitle.objects.filter(user=id).order_by('id')
     data = {
         'diaries': diaries,
         'id': id,
@@ -147,3 +146,13 @@ def keep_diary(request):
         'diaries': diaries,
         'contents': contents,
     })
+
+def ApiGood(request, id):
+    try:
+        obj = DiaryTitle.objects.get(id=id)
+    except DiaryTitle.DoesNotExist:
+        raise Http404
+    obj.goodstamp += 1
+    obj.save()
+
+    return JsonResponse({"goodstamp":obj.goodstamp})

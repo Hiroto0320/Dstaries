@@ -11,10 +11,3 @@ def home(request):
         'users':users
     }
     return render(request, 'dreams/home.html', data)
-
-# def search_by_dream(request):
-#     users = User.objects.all()
-#     data = {
-#         'users':users,
-#     }
-#     return render(request, 'dreams/users.html', data)

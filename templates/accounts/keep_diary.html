@@ -19,7 +19,7 @@
     <input checked="<%= true %>" class="nav" name="nav" type="radio"></input>
     <span class="nav">Keep a diary</span>
     <input class="nav" name="nav" type="radio"></input>
-    <span class="nav">Create new book</span>
+    <span class="nav">Edit books</span>
     <main class="content">
       <section id="keep-diary">
         <form action="{% url 'accounts:keep_diary' %}" method="POST">
@@ -91,7 +91,7 @@
               <fieldset class="material">
                 <div class="delete-book">
                   <select name="delete_diary-title">
-                    <option value="" disabled selected style="display:none;" class="None-option">You can delete Books here.</option>
+                    <option value="" selected style="display:none;" class="None-option">You can delete Books here.</option>
                     {% for title in diaries %}
                     <option>{{title.diary_title}}</option>
                     {% endfor %}

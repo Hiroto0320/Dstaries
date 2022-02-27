@@ -33,6 +33,7 @@ class DiaryTitle(models.Model):
         'User', on_delete=models.CASCADE
     )
     is_public = models.BooleanField(default=True)
+    goodstamp = models.IntegerField(default=0)
     class Meta:
         db_table = 'diary_title'
 

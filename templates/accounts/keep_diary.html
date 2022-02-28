@@ -31,7 +31,7 @@
                   <select name="diary-title" value="Title" required>
                     <option value="" disabled selected style="display:none;" class="None-option">Choose a book</option>
                     {% for title in diaries %}
-                    <option>{{title.diary_title}}</option>
+                    <option value="{{ title.diary_title }}">{{title.diary_title}} : {{ title.goodstamp }}cheers</option>
                     {% endfor %}
                   </select>
                   <hr/>

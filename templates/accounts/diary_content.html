@@ -35,6 +35,7 @@
 </head>
 <body>
 {% load static %}
+{% load accounts_extras %}
 <link rel="stylesheet" href="{% static 'css/content.css' %}">
 {% if contents %}
 <section>
@@ -48,9 +49,15 @@
 </a>
 </div>
 <ul class="content-ul">
-    {% for content in contents %}
+    {% for content in contents reversed %}
     <div class="openbook-image">
+    {% if forloop.counter0|divisibleby:"3" %}
+    {% with "css/diary_images/"|join:forloop.counter0 as image_dir %}
+    <img src="{% static image_dir %}" width="40px">
+    {% endwith %}
+    {% else %}
     <img src="{% static 'css/img/open_book.png' %}" height="30" width="30">
+    {% endif %}
     </div>
     <li>
         <p class="date">{{ content.date|date:"Y/n/j" }}</p>

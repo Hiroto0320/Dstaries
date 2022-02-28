@@ -444,7 +444,7 @@
     font-size: 18px;
   }
   .material-button button.save:hover, .material-button button.save:focus, .material-button input[type=submit].save:hover, .material-button input[type=submit].save:focus {
-    background: #cd908b;
+    background: #ffd700;
   }
   .material-button button.save:active, .material-button input[type=submit].save:active {
     background: #ff6600;

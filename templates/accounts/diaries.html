@@ -50,7 +50,9 @@
             <br>
             <li>
                 <h3>{{ diary.diary_title }}
+                    {% if diary.user == request.user %}
                     <img src="{% static 'css/img/cheer.png' %}" height="24px" width="24px">
+                    {% endif %}
                 </h3>
                 <a href="{% url 'accounts:diary_content' diary.id %}" class="diary-title">
                     <img src="{% static 'css/img/book-public.png' %}" height="24" width="24">

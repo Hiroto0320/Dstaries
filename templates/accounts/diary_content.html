@@ -41,6 +41,7 @@
 <section>
 <h2 class="title">{{ title }}</h2>
 <h4 class="content-username">{{ title.user.username }}</h4>
+{% if title.user != request.user %}
 <div class="good-frame">
 <a id="good-a" onclick="api_good()">
     <img src="{% static 'css/img/cheer.png' %}" height="30px" width="30px" alt="no image" class="cheer-image">
@@ -48,6 +49,7 @@
     <p class="good-p">Cheer up!</p>
 </a>
 </div>
+{% endif %}
 <ul class="content-ul">
     {% for content in contents reversed %}
     <div class="openbook-image">

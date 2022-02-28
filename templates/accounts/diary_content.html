@@ -51,7 +51,7 @@
 <ul class="content-ul">
     {% for content in contents reversed %}
     <div class="openbook-image">
-    {% if forloop.counter0|divisibleby:"3" %}
+    {% if forloop.counter0|divisibleby:"2" %}
     {% with "css/diary_images/"|join:forloop.counter0 as image_dir %}
     <img src="{% static image_dir %}" width="40px">
     {% endwith %}

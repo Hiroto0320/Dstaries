@@ -548,7 +548,7 @@
   .icon {
     height: 60px;
     width: 60px;
-    border-radius: 20px;
+    border-radius: 90%;
   }
 
   .icon-form label {
@@ -601,6 +601,10 @@
   
   .is_public-label {
     float: left;
+  }
+
+  fieldset {
+    border-radius: 10px;
   }
 
   .material_account label {

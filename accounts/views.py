@@ -102,7 +102,7 @@ def diary(request, id):
 @login_required(login_url='accounts:sign')
 def diary_content(request, diary_id):
     title = get_object_or_404(DiaryTitle, id=diary_id)
-    contents = DiaryContent.objects.filter(diary_title=diary_id).order_by('-date')
+    contents = DiaryContent.objects.filter(diary_title=diary_id).order_by('date')
     if title.user == request.user or title.is_public:
         data = {
             'contents': contents,

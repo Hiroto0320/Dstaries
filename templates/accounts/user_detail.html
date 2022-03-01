@@ -15,63 +15,60 @@
 </head>
 <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 <body>
-<section id="settings">
-      <ul>
-        <li class="large padding avatar">
-          <img class="icon" {% if user_detail.icon %} src="{{ user_detail.icon.url }}"{% else %}src="{% static 'css/img/default.jpg' %}" {% endif %}>
-          <p class="username">{{ user_detail.username }}</p>
-          <a href="{{ user_detail.website }}" class="website" target="_blank">
-            <img src="{% static 'css/img/cloud-website-removebg-preview.png' %}" height="70px" width="100px" class="website-hukidashi">
-          </a>
-          <a href="{% url 'accounts:diary' user_detail.id %}" class="diary">
-            <img src="{% static 'css/img/cloud-304979__480-removebg-preview.png' %}" height="70px" width="100px" class="diary-hukidashi">
-          </a>
-        </li>
-        <li>
-          {% if user_detail.dream %}
-          <fieldset class="material">
-            <div>
-              <p>{{ user_detail.dream }}</p>
-              <label>Dream</label>
-              <hr/>
-            </div>
-          </fieldset>
-          {% endif %}
-        </li>
-        <li>
-          {% if user_detail.task %}
-          <fieldset class="material">
-            <div>
-              <p>{{ user_detail.task }}</p>
-                <label>What I decided to do</label>
-              <hr/>
-            </div>
-          </fieldset>
-          {% endif %}
-        </li>
-        <li>
-          {% if user_detail.favorite %}
-          <fieldset class="material">
-            <div>
-              <p>{{ user_detail.favorite }}</p>
-                <label>My favorite</label>
-              <hr/>
-            </div>
-          </fieldset>
-          {% endif %}
-        </li>
+  <section>
+    <img src="{{ user_detail.icon.url }}" height="82px" width="82px" class="detail-icon">
+    <h2 class="detail-h2">
+      <a {% if user_detail.website %} href="{{ user_detail.website }}" {% endif %} class="detail-to-website" target="_blank">
+        {{ user_detail.username }}
+      </a>
+    </h2>
+    <ul class="detail-content">
+      <fieldset>
+        <legend>I like</legend>
+      <li class="detail-li">
+        {% if user_detail.favorite %}
+        {{ user_detail.favorite }}
+        {% endif %}
+      </li>
+      </fieldset>
+      <fieldset>
+        <legend>My dream</legend>
+      <li class="detail-li">
+        {% if user_detail.dream %}
+        {{ user_detail.dream }}
+        {% endif %}      
+      </li>
+      </fieldset>
+      <fieldset>
+        <legend>I decided to</legend>
+      <li class="detail-li">
+        {% if user_detail.task %}
+        {{ user_detail.task }}
+        {% endif %}
+      </li>
+      </fieldset>
+      <fieldset>
+        <legend>About me</legend>
+      <li class="detail-li">
         {% if user_detail.introduction %}
-        <li class="large">
-          <fieldset class="material">
-            <div>
-              <p>{{ user_detail.introduction | linebreaksbr }}</p>
-              <label>About me</label>
-              <hr/>
-            </div>
-          </fieldset>
-          {% endif %}
-        </li>
-      </ul>
+        {{ user_detail.introduction }}
+        {% endif %}
+      </li>
+      </fieldset>
+      <fieldset class="diary-fieldset">
+        <legend class="diary-legend">
+          Diaries
+        </legend>
+        <a href="{% url 'accounts:diary' user_detail.id %}" class="detail-diary">
+      <li class="detail-li">
+        {% for diary in user_detail.related_diary_title.all %}
+          {{ diary.diary_title }}
+        <br>
+        {% endfor %}
+      </li>
+    </a>
+      </fieldset>
+    </ul>
   </section>
 </body>
 {% endblock %}

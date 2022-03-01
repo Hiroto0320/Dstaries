@@ -38,47 +38,47 @@
 {% load accounts_extras %}
 <link rel="stylesheet" href="{% static 'css/content.css' %}">
 {% if contents %}
-<section>
-<h2 class="title">{{ title }}</h2>
-<h4 class="content-username">{{ title.user.username }}</h4>
-{% if title.user != request.user %}
-<div class="good-frame">
-<a id="good-a" onclick="api_good()">
-    <img src="{% static 'css/img/cheer.png' %}" height="30px" width="30px" alt="no image" class="cheer-image">
-    <span id="good_count"></span>
-    <p class="good-p">Cheer up!</p>
-</a>
-</div>
-{% endif %}
-<ul class="content-ul">
-    {% for content in contents reversed %}
-    <div class="openbook-image">
-    {% if forloop.counter0|divisibleby:"2" %}
-    {% with "css/diary_images/"|join:forloop.counter0 as image_dir %}
-    <img src="{% static image_dir %}" width="40px">
-    {% endwith %}
-    {% else %}
-    <img src="{% static 'css/img/open_book.png' %}" height="30" width="30">
+    <section>
+    <h2 class="title">{{ title }}</h2>
+    <h4 class="content-username">{{ title.user.username }}</h4>
+    {% if title.user != request.user %}
+        <div class="good-frame">
+        <a id="good-a" onclick="api_good()">
+            <img src="{% static 'css/img/cheer.png' %}" height="30px" width="30px" alt="no image" class="cheer-image">
+            <span id="good_count"></span>
+            <p class="good-p">Cheer up!</p>
+        </a>
+        </div>
     {% endif %}
-    </div>
-    <li>
-        <p class="date">{{ content.date|date:"Y/n/j" }}</p>
-    </li>
-    <hr>
-    <li>
-        {% if content.subtitle %}
-        <p class="subtitle">{{ content.subtitle }}</p>
+    <ul class="content-ul">
+        {% for content in contents %}
+        <div class="openbook-image">
+        {% if content.user == request.user and forloop.counter0|divisibleby:"2" %}
+        {% with "css/diary_images/"|join:forloop.counter0 as image_dir %}
+        <img src="{% static image_dir %}" width="40px">
+        {% endwith %}
+        {% else %}
+        <img src="{% static 'css/img/open_book.png' %}" height="30" width="30">
         {% endif %}
-    </li>
-    <li>
-        <p class="content">{{ content.content }}</p>
-    </li>
-    <br>
-    {% endfor %}
-</ul>
-{% else %}
-<h2>There is no diary</h2>
-{% endif %}
-</section>
+        </div>
+        <li>
+            <p class="date">{{ content.date|date:"Y/n/j" }}</p>
+        </li>
+        <hr>
+        <li>
+            {% if content.subtitle %}
+            <p class="subtitle">{{ content.subtitle }}</p>
+            {% endif %}
+        </li>
+        <li>
+            <p class="content">{{ content.content }}</p>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2>There is no diary</h2>
+    {% endif %}
+    </section>
 </body>
 {% endblock %}

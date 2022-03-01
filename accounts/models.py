@@ -30,7 +30,7 @@ class DiaryTitle(models.Model):
     diary_title = models.CharField(max_length=100, null=True)
     date = models.DateField(auto_now_add=True)
     user = models.ForeignKey(
-        'User', on_delete=models.CASCADE
+        'User', on_delete=models.CASCADE, related_name='related_diary_title'
     )
     is_public = models.BooleanField(default=True)
     goodstamp = models.IntegerField(default=0)

@@ -5,6 +5,8 @@
 .content {
     margin-bottom: 2%;
     font-family: cursive;
+    font-size: large;
+    font-weight: 600;
 }
 
 .content-username {

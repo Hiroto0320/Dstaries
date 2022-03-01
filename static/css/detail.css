@@ -2,6 +2,7 @@ body {
   background: linear-gradient(pink 0%, whitesmoke 85%, whitesmoke 100%);
   margin: 0;
   overflow-y: scroll;
+  vertical-align: middle;
 }
 
 .detail-icon {

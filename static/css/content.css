@@ -1,12 +1,13 @@
 .subtitle {
     text-decoration: underline;
+    font-family: cursive;
+    font-size: large;
 }
 
 .content {
-    margin-bottom: 2%;
-    font-family: cursive;
+    margin-bottom: 15px;
     font-size: large;
-    font-weight: 600;
+    margin-top: 5px;
 }
 
 .content-username {

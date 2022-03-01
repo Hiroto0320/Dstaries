@@ -50,8 +50,8 @@
         </a>
         </div>
     {% endif %}
+    {% for content in contents %}
     <ul class="content-ul">
-        {% for content in contents %}
         <div class="openbook-image">
         {% if content.user == request.user and forloop.counter0|divisibleby:"2" %}
         {% with "css/diary_images/"|join:forloop.counter0 as image_dir %}
@@ -74,8 +74,8 @@
             <p class="content">{{ content.content }}</p>
         </li>
         <br>
-        {% endfor %}
     </ul>
+    {% endfor %}
     {% else %}
     <h2>There is no diary</h2>
     {% endif %}

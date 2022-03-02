@@ -51,17 +51,19 @@ legend {
   font-family: serif;
   /* border-bottom: 1px solid; */
   cursor: default;
+  font-size: 1.1rem;
 }
 
 .detail-li {
   font-weight: bolder;
   text-align: center;
-  font-size: large;
+  font-size: 1.15rem;
 }
 
 .detail-username {
   margin-top: 10px;
   margin-bottom: 0;
+  font-size: 1.6rem;
 }
 
 .detail-username:hover {
@@ -74,10 +76,6 @@ legend {
   text-align: center;
   text-decoration: none;
   color: black;
-}
-
-.diary-legend {
-  font-size: large;
 }
 
 .diary-fieldset {

@@ -53,7 +53,7 @@
     {% for content in contents %}
     <ul class="content-ul">
         <div class="openbook-image">
-        {% if content.user == request.user and forloop.counter0|divisibleby:"2" %}
+        {% if content.user == request.user and forloop.counter0|divisibleby:"3" %}
         {% with "css/diary_images/"|join:forloop.counter0 as image_dir %}
         <img src="{% static image_dir %}" width="40px">
         {% endwith %}

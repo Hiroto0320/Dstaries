@@ -6,6 +6,8 @@ body {
 
 .detail-icon {
   border-radius: 90%;
+  height: 120px;
+  width: 120px;
 }
 
 .detail-to-diary {
@@ -63,7 +65,7 @@ legend {
 .detail-username {
   margin-top: 10px;
   margin-bottom: 0;
-  font-size: 1.6rem;
+  font-size: 2.0rem;
 }
 
 .detail-username:hover {
@@ -87,7 +89,7 @@ legend {
 
 .diary-fieldset:hover {
   /* background-color: #ffbbdd; */
-  background-color: #f3d284;
+  background-color: #ffe098;
 }
 
 .see-diary {

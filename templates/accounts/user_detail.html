@@ -19,7 +19,7 @@
     {% if user_detail.icon %}
     <img src="{{ user_detail.icon.url }}" height="82px" width="82px" class="detail-icon">
     {% else %}
-    <img src="{% static 'css/img/default.jpg' %}" height="82px" width="82px" class="detail-icon">
+    <img src="{% static 'css/img/default.jpg' %}" class="detail-icon">
     {% endif %}
     <h2 class="detail-username">
       <a {% if user_detail.website %} href="{{ user_detail.website }}" {% endif %} class="detail-to-website" target="_blank">

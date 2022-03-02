@@ -184,3 +184,6 @@ CLOUDINARY_STORAGE = {
 'API_SECRET': 'jPVvfv--09s4H1f4rwSZECaJwDE'
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+#Login Session
+SESSION_COOKIE_AGE = 900

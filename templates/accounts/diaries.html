@@ -29,9 +29,11 @@
         {% if diary.user == user %}
             <br>
             <li>
-                <h3>{{ diary.diary_title }}
-                    <img src="{% static 'css/img/cheer.png' %}" height="24px" width="24px">
-                </h3>
+                <h3>{{ diary.diary_title }}</h3>
+                <h5 class="cheerimg">
+                    <img src="{% static 'css/img/cheer.png' %}" height="20px" width="20px">
+                    &times;{{ diary.goodstamp }}
+                </h5>
                 <h6 class="is_public">
                     {% if diary.is_public %}
                     <img src="{% static 'css/img/book-public.png' %}" height="24" width="24">

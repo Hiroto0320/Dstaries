@@ -16,8 +16,12 @@
 <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 <body>
   <section>
+    {% if user_detail.icon %}
     <img src="{{ user_detail.icon.url }}" height="82px" width="82px" class="detail-icon">
-    <h2 class="detail-h2">
+    {% else %}
+    <img src="{% static 'css/img/default.jpg' %}" height="82px" width="82px" class="detail-icon">
+    {% endif %}
+    <h2 class="detail-username">
       <a {% if user_detail.website %} href="{{ user_detail.website }}" {% endif %} class="detail-to-website" target="_blank">
         {{ user_detail.username }}
       </a>
@@ -59,14 +63,22 @@
         <legend class="diary-legend">
           Diaries
         </legend>
+        {% if user_detail.related_diary_title.all %}
         <a href="{% url 'accounts:diary' user_detail.id %}" class="detail-diary">
       <li class="detail-li">
         {% for diary in user_detail.related_diary_title.all %}
           {{ diary.diary_title }}
+          {% if diary.is_public %}
+          <img src="{% static 'css/img/book-public.png' %}" height="24px" width="24px">
+          {% else %}
+          <img src="{% static 'css/img/closed_book.png' %}" height="20px" width="20px">
+          {% endif %}
         <br>
         {% endfor %}
       </li>
+      <div class="see-diary">click and see diaries!</div>
     </a>
+      {% endif %}
       </fieldset>
     </ul>
   </section>

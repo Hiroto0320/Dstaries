@@ -59,10 +59,15 @@ legend {
   font-size: large;
 }
 
-.detail-h2 {
+.detail-username {
   margin-top: 10px;
   margin-bottom: 0;
-  border-bottom: solid;
+}
+
+.detail-username:hover {
+  color: #006400;
+  border-bottom: 2px solid;
+  margin-bottom: -2px;
 }
 
 .detail-diary {
@@ -73,17 +78,22 @@ legend {
 
 .diary-legend {
   font-size: large;
-  background-color: whitesmoke;
 }
 
 .diary-fieldset {
   text-align: center;
   margin-top: 50px;
-  transition: 1.0s;
+  transition: 0.8s;
   cursor: pointer;
 }
 
 .diary-fieldset:hover {
   /* background-color: #ffbbdd; */
-  background-color: #e6b543;
+  background-color: #f3d284;
+}
+
+.see-diary {
+  float: right;
+  font-weight: 600;
+  margin-top: -20px;
 }

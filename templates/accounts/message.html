@@ -17,6 +17,7 @@
     {% else %}
     <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
     {% endif %}
+    <div class="date">{{ message.date|date:"Y/n/j P" }}</div>
 </h4>
 {% elif message.sender == friend %}
 <h4 class="friend-message">
@@ -25,7 +26,9 @@
     {% else %}
     <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
     {% endif %}
-    {{ message.content }}</h4>
+    {{ message.content }}
+    <div class="date">{{ message.date|date:"Y/n/j P" }}</div>
+</h4>
 <br>
 {% else %}
 <h1>It is not your room</h1>

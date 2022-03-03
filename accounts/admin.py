@@ -20,6 +20,4 @@ class AdminMessage(admin.ModelAdmin):
     list_display = ('receiver', 'date')
 admin.site.register(Message, AdminMessage)
 
-class AdminThread(admin.ModelAdmin):
-    list_display = ('user1', 'user2')
-admin.site.register(Thread, AdminThread)
+admin.site.register(Thread)

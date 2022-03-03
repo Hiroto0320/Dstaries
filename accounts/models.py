@@ -60,7 +60,10 @@ class Thread(models.Model):
     
     class Meta:
         db_table = 'thread'
-
+    
+    def __str__(self):
+        return f'{self.user1} : {self.user2}'
+    
 class Message(models.Model):
     thread = models.ForeignKey(
         'Thread', on_delete=models.CASCADE)

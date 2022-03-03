@@ -66,3 +66,7 @@ h1, h2 {
     width: 100px;
     height: 40px;
 }
+
+.date {
+    font-size: x-small;
+}

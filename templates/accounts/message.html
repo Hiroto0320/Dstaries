@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/message.css' %}">
 </head>
 <section>
-<h1>{{ user.username }}</h1>
-<h2>you can chat with {{ friend.username }}</h2>
-
+<h1>{{ friend.username }} : {{ user.username }}</h1>
 <ul>
 {% for message in messages %}
 {% if message.sender == user %}

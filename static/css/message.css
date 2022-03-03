@@ -31,14 +31,14 @@ section {
 }
 
 .message-form {
-    margin-left: 80%;
+    margin-left: 70%;
     margin-top: 40px;
 }
 
 .message-textarea {
     resize: none;
-    height: 80px;
-    width: 180px;
+    height: 160px;
+    width: 320px;
 }
 
 ::placeholder {

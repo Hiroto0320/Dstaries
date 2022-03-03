@@ -51,3 +51,25 @@ class DiaryContent(models.Model):
 
     class Meta:
         db_table = 'diary_content'
+
+class Thread(models.Model):
+    user1 = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='thread_sender')
+    user2 = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='thread_receiver')
+    
+    class Meta:
+        db_table = 'thread'
+
+class Message(models.Model):
+    thread = models.ForeignKey(
+        'Thread', on_delete=models.CASCADE)
+    sender = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='message_sender')
+    receiver = models.ForeignKey(
+        'User', on_delete=models.CASCADE, related_name='message_receiver')
+    content = models.CharField(max_length=255, null=False)
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'message'

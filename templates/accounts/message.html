@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/message.css' %}">
+</head>
+<section>
+<h1>{{ user.username }}</h1>
+<h2>you can chat with {{ friend.username }}</h2>
+
+<ul>
+{% for message in messages %}
+{% if message.sender == user %}
+<h4 class="my-message">{{ message.content }}
+    {% if user.icon %}
+    <img src="{{ user.icon.url }}" class="message-icon">
+    {% else %}
+    <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
+    {% endif %}
+</h4>
+{% elif message.sender == friend %}
+<h4 class="friend-message">
+    {% if friend.icon %}
+    <img src="{{ friend.icon.url }}" class="message-icon">
+    {% else %}
+    <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
+    {% endif %}
+    {{ message.content }}</h4>
+<br>
+{% else %}
+<h1>It is not your room</h1>
+{% endif %}
+{% endfor %}
+</ul>
+<form method="POST" action="{% url 'accounts:message' friend.id %}" class="message-form">
+    {% csrf_token %}
+    <textarea placeholder="send message to {{ friend.username }}." name="message" class="message-textarea" maxlength="255" required></textarea>
+    <button type="submit">send!</button>
+</form>
+</section>
+{% endblock %}

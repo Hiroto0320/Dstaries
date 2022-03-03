@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, DiaryTitle, DiaryContent
+from .models import User, DiaryTitle, DiaryContent, Message, Thread
 # Register your models here.
 
 class AdminUser(admin.ModelAdmin):
@@ -15,3 +15,11 @@ admin.site.register(DiaryTitle, AdminDiary)
 class AdminDiaryContent(admin.ModelAdmin):
     list_display = ('diary_title', 'user', 'date')
 admin.site.register(DiaryContent, AdminDiaryContent)
+
+class AdminMessage(admin.ModelAdmin):
+    list_display = ('receiver', 'date')
+admin.site.register(Message, AdminMessage)
+
+class AdminThread(admin.ModelAdmin):
+    list_display = ('user1', 'user2')
+admin.site.register(Thread, AdminThread)

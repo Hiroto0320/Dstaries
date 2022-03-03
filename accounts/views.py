@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from . import forms
 from django.core.exceptions import ValidationError
 from django.contrib.auth.password_validation import validate_password
-from .models import User, DiaryTitle, DiaryContent
+from .models import User, DiaryTitle, DiaryContent, Message, Thread
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
@@ -156,3 +156,34 @@ def ApiGood(request, id):
     obj.save()
 
     return JsonResponse({"goodstamp":obj.goodstamp})
+
+@login_required(login_url='accounts:sign')
+def message(request, id):
+    friend = get_object_or_404(User, pk=id)
+    if (request.user == friend) or (not friend.is_public):
+        return redirect('dreams:home')
+    if request.method == 'POST':
+        try:
+            thread = get_object_or_404(Thread, user1=request.user, user2=friend)
+        except:
+            try:
+                thread = get_object_or_404(Thread, user1=friend, user2=request.user)
+            except:  
+                thread = Thread.objects.create(
+                    user1=request.user,
+                    user2=friend
+                )
+        Message.objects.filter(sender=request.user, receiver=friend).create(
+            thread=thread,
+            sender=request.user,
+            receiver=friend,
+            content=request.POST.get('message'),
+        )
+    to_me_messages = Message.objects.filter(receiver=request.user, sender=friend).order_by('date')
+    from_me_messages = Message.objects.filter(sender=request.user, receiver=friend).order_by('date')
+    messages = to_me_messages|from_me_messages
+    data = {
+        'messages':messages,
+        'friend':friend,
+    }
+    return render(request, 'accounts/message.html', data)

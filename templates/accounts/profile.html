@@ -19,7 +19,7 @@
     <input checked="<%= true %>" class="nav" name="nav" type="radio"></input>
     <span class="nav">Edit profile</span>
     <input class="nav" name="nav" type="radio"></input>
-    <span class="nav">Account info</span>
+    <span class="nav">Messages</span>
     <main class="content">
       <section id="profile">
         <form method="POST" enctype="multipart/form-data">
@@ -115,72 +115,24 @@
 
       <section id="account">
         <ul>
-          <li>
-            <img class="icon" {% if user.icon %} src="{{ user.icon.url }}"{% else %}src="{% static 'css/img/default.jpg' %}" {% endif %}>
+          <li class="material">
+            <img class="icon" {% if user.icon %} src="{{ user.icon.url }}" {% endif %}>
           </li>
-          <li>
-            <fieldset class="material_account">
-              <div>
-                <p class="account-info-p">{{ user.email }}</p>
-                <label>Email</label>
-                <hr/>
-              </div>
-            </fieldset>
+          {% if user.thread_receiver.all %}
+          {% for message in user.thread_receiver.all %}
+          <h3>Message rooms</h3>
+          <li class="material">
+          <a href="{% url 'accounts:message' message.user1.id %}" class="message-room">{{ message.user1.username }}</a>
           </li>
-          <li>
-            <fieldset class="material_account">
-              <div>
-                <p class="account-info-p">{{ user.username }}</p>
-                <label>Username</label>
-                <hr/>
-              </div>
-            </fieldset>
+          {% endfor %}
+          {% endif %}
+          {% if user.thread_sender.all %}
+          {% for message in user.thread_sender.all %}
+          <li class="material">
+          <a href="{% url 'accounts:message' message.user2.id %}" class="message-room">{{ message.user2.username }}</a>
           </li>
-          <li>
-            {% if user.dream %}
-            <fieldset class="material_account">
-              <div>
-                <p class="account-info-p">{{ user.favorite }}</p>
-                <label>Favorite things</label>
-                <hr/>
-              </div>
-            </fieldset>
-            {% endif %}
-          </li>
-          <li>
-            {% if user.dream %}
-            <fieldset class="material_account">
-              <div>
-                <p class="account-info-p">{{ user.dream }}</p>
-                <label>Dream</label>
-                <hr/>
-              </div>
-            </fieldset>
-            {% endif %}
-          </li>
-          <li>
-            {% if user.task %}
-            <fieldset class="material_account">
-              <div>
-                <p class="account-info-p">{{ user.task }}</p>
-                  <label>My Task</label>
-                <hr/>
-              </div>
-            </fieldset>
-            {% endif %}
-          </li>
-
-          {% if user.introduction %}
-          <li class="large">
-            <fieldset class="material_account">
-              <div>
-                <p class="account-info-p">{{ user.introduction | linebreaksbr }}</p>
-                <label>About me</label>
-                <hr/>
-              </div>
-            </fieldset>
-            {% endif %}
-          </li>
+          {% endfor %}
+          {% endif %}
         </ul>
       </section>
     </main>

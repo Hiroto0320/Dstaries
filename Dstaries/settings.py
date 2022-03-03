@@ -58,7 +58,7 @@ MIDDLEWARE = [
 #Active Django-Heroku
 django_heroku.settings(locals())
 
-ROOT_URLCONF = 'Dstories.urls'
+ROOT_URLCONF = 'Dstaries.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Dstories.wsgi.application'
+WSGI_APPLICATION = 'Dstaries.wsgi.application'
 
 
 # Database

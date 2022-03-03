@@ -26,6 +26,11 @@
         {{ user_detail.username }}
       </a>
     </h2>
+    {% if request.user != user_detail %}
+    <h3>
+      <a href="{% url 'accounts:message' user_detail.id %}">Send messages!</a>
+    </h3>
+    {% endif %}
     <ul class="detail-content">
       <fieldset>
         <legend>I like</legend>

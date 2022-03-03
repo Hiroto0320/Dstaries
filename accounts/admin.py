@@ -17,7 +17,7 @@ class AdminDiaryContent(admin.ModelAdmin):
 admin.site.register(DiaryContent, AdminDiaryContent)
 
 class AdminMessage(admin.ModelAdmin):
-    list_display = ('receiver', 'date')
+    list_display = ('receiver', 'sender', 'date')
 admin.site.register(Message, AdminMessage)
 
 admin.site.register(Thread)

@@ -168,7 +168,7 @@ def message(request, id):
         except:
             try:
                 thread = get_object_or_404(Thread, user1=friend, user2=request.user)
-            except:  
+            except:
                 thread = Thread.objects.create(
                     user1=request.user,
                     user2=friend

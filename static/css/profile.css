@@ -72,14 +72,17 @@
   
   @media only screen and (min-height: 500px) {
     #settings {
-      height: 740px;
-    width: 720px;
+      height: 840px;
+    width: 780px;
     }
     .material input {
-      font-size: 24px;
+      font-size: 28px;
+    }
+    .material label {
+      font-size: medium;
     }
     body {
-      font-size: 24px;
+      font-size: 28px;
     }
   }
   

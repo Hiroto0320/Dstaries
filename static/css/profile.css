@@ -81,6 +81,9 @@
     .material label {
       font-size: medium;
     }
+    .material-button button {
+      font-size: large;
+    }
     body {
       font-size: 28px;
     }

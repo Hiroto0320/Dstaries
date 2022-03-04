@@ -76,6 +76,9 @@
       height: 840px;
       width: 780px;
     }
+    body {
+      font-size: 38px;
+    }
     .material input {
       font-size: 32px;
     }
@@ -84,9 +87,6 @@
     }
     .material-button button {
       font-size: large;
-    }
-    body {
-      font-size: 28px;
     }
     .icon {
       height: 90px;

@@ -73,7 +73,7 @@
   @media only screen and (min-height: 500px) {
     #settings {
       height: 740px;
-      width: 100%;
+      transform: scale(1.5, 1);
     }
   }
   

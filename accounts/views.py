@@ -89,6 +89,8 @@ def profile(request):
 @login_required(login_url='accounts:sign')
 def user_detail(request, id):
     user_detail = get_object_or_404(User, pk=id)
+    if (request.user != user_detail) and (not user_detail.is_public):
+        return redirect('dreams:home')
     data = {
         'user_detail': user_detail
     }
@@ -96,6 +98,9 @@ def user_detail(request, id):
 
 @login_required(login_url='accounts:sign')
 def diary(request, id):
+    user = get_object_or_404(User, pk=id)
+    if (request.user != user) and (not user.is_public):
+        return redirect('dreams:home')
     diaries = DiaryTitle.objects.filter(user=id).order_by('id')
     data = {
         'diaries': diaries,
@@ -151,16 +156,6 @@ def keep_diary(request):
         'contents': contents,
     })
 
-def ApiGood(request, id):
-    try:
-        obj = DiaryTitle.objects.get(id=id)
-    except DiaryTitle.DoesNotExist:
-        raise Http404
-    obj.goodstamp += 1
-    obj.save()
-
-    return JsonResponse({"goodstamp":obj.goodstamp})
-
 @login_required(login_url='accounts:sign')
 def message(request, id):
     friend = get_object_or_404(User, pk=id)
@@ -191,3 +186,13 @@ def message(request, id):
         'friend':friend,
     }
     return render(request, 'accounts/message.html', data)
+
+def ApiGood(request, id):
+    try:
+        obj = DiaryTitle.objects.get(id=id)
+    except DiaryTitle.DoesNotExist:
+        raise Http404
+    obj.goodstamp += 1
+    obj.save()
+
+    return JsonResponse({"goodstamp":obj.goodstamp})

@@ -24,9 +24,9 @@
         </li> {% endcomment %}
         <li><a href="{% url 'accounts:profile' %}">My account</a></li>
         {% if 'accounts/diary' in request.path %}
-        <li><a href="{% url 'accounts:keep_diary' %}">Keep a diary</a></li>
+        <li><a href="{% url 'accounts:keep_diary' %}">Write a story</a></li>
         {% else %}
-        <li><a href="{% url 'accounts:diary' user.id %}">My diary</a></li>
+        <li><a href="{% url 'accounts:diary' user.id %}">My story</a></li>
         {% endif %}
         {% else %}
         <li><a href="{% url 'accounts:sign' %}">Sign in  /  Sign up</a></li>

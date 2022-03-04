@@ -66,7 +66,7 @@
       </fieldset>
       <fieldset class="diary-fieldset">
         <legend>
-          Diaries
+          Stories
         </legend>
         {% if user_detail.related_diary_title.all %}
         <a href="{% url 'accounts:diary' user_detail.id %}" class="detail-diary">
@@ -81,7 +81,7 @@
         <br>
         {% endfor %}
       </li>
-      <div class="see-diary">click and see diaries!</div>
+      <div class="see-diary">click and read {{ user_detail.username }}'s stories!</div>
     </a>
       {% endif %}
       </fieldset>

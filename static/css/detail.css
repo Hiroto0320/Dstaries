@@ -13,33 +13,35 @@ body {
 
 .detail-username {
   margin-top: 10px;
-  margin-bottom: 10px;
+  border-bottom: 2px solid transparent;
   font-size: 2.0rem;
+  margin-bottom: 2px;
+  cursor: pointer;
 }
 
 .detail-username:hover {
-  color: rgb(109, 52, 52);
+  color: rgb(87, 13, 13);
   border-bottom: 2px solid;
-  margin-bottom: -2px;
+  margin-bottom: 2px;
 }
 
 .send-messages {
   text-decoration: none;
   color: black;
-  border: solid;
+  border: 2px solid transparent;
   padding: 5px;
   border-radius: 20px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .send-messages:hover {
   background-color: #efffd7;
+  border: 2px solid black;
 }
 
 .detail-to-diary {
   text-decoration: none;
   color: black;
-
 }
 
 .detail-to-website {
@@ -98,7 +100,7 @@ legend {
 .diary-fieldset {
   text-align: center;
   margin-top: 50px;
-  transition: 0.8s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -110,5 +112,5 @@ legend {
 .see-diary {
   float: right;
   font-weight: 600;
-  margin-top: -20px;
+  margin-bottom: -10px;
 }

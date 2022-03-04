@@ -79,7 +79,7 @@
     body {
       font-size: 28px;
     }
-    .material input {
+    /* .material input {
       font-size: 28px!important;
     }
     .material label {
@@ -91,7 +91,7 @@
     .icon {
       height: 82px!important;
       width: 82px!important;
-    }
+    } */
   }
   
   span.nav {

@@ -70,9 +70,9 @@
     top: 30px;
   }
   
-  @media only screen and (min-height: 500px) {
+  @media only screen and (min-width: 500px) {
     #settings {
-      height: 740px;
+      max-height: 640px;
     }
   }
   
@@ -621,7 +621,7 @@
   .delete-button{
     border-radius: 20px;
     color: black;
-    background-color: white;
+    background-color: whitesmoke;
     padding: 3px;
     font-size: 1.0rem;
     border: 2px solid black;
@@ -645,9 +645,10 @@
   .material.message-li {
     border-bottom: solid;
     padding-bottom: 0;
-    height: 55px;
+    height: 55%;
     margin-bottom: 20px;
   }
+
   /* .message-field {
     width: 80%;
     padding-bottom: 0;

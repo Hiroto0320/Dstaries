@@ -20,7 +20,7 @@
   body {
 	align-items: center;
 	background-color: var(--white);
-	background: url("./img/star.png");
+	background: url("./img/star.5e32f14d3ef3.png");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -102,7 +102,7 @@
   
   .overlay {
 	background-color: var(--lightblue);
-	background: url("./img/star.png");
+	background: url("./img/star.5e32f14d3ef3.png");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;

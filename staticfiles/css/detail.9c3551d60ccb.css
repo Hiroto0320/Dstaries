@@ -13,31 +13,32 @@ body {
 
 .detail-username {
   margin-top: 10px;
-  border-bottom: 2px solid transparent;
+  /* border-bottom: 2px solid transparent; */
   font-size: 2.0rem;
   margin-bottom: 2px;
   cursor: pointer;
 }
 
-.detail-username:hover {
+/* .detail-username:hover {
   color: rgb(87, 13, 13);
   border-bottom: 2px solid;
   margin-bottom: 2px;
-}
+} */
 
 .send-messages {
-  text-decoration: none;
+  /* text-decoration: none;
   color: black;
   border: 2px solid transparent;
   padding: 5px;
   border-radius: 20px;
-  transition: 0.3s;
+  transition: 0.3s; */
+  font-size: x-large;
 }
 
-.send-messages:hover {
+/* .send-messages:hover {
   background-color: #efffd7;
   border: 2px solid black;
-}
+} */
 
 .detail-to-diary {
   text-decoration: none;

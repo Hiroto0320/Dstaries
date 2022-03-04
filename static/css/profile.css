@@ -71,6 +71,7 @@
   }
   
   @media only screen and (min-height: 500px) {
+
     #settings {
       height: 840px;
       width: 780px;
@@ -86,6 +87,10 @@
     }
     body {
       font-size: 28px;
+    }
+    .icon {
+      height: 90px;
+      width: 90px;
     }
   }
   

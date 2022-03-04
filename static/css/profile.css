@@ -480,6 +480,7 @@
   @media only screen and (max-height: 444px) {
     .material-button button.save, .material-button input[type=submit].save {
       display: none;
+      font-size: 32px;
     }
   }
   .material-button button.connect, .material-button input[type=submit].connect {

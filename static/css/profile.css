@@ -73,7 +73,13 @@
   @media only screen and (min-height: 500px) {
     #settings {
       height: 740px;
-      transform: scale(2.5, 1);
+    width: 720px;
+    }
+    .material input {
+      font-size: 24px;
+    }
+    body {
+      font-size: 24px;
     }
   }
   
@@ -344,6 +350,9 @@
     line-height: 1.5;
     overflow: scroll;
   }
+
+
+
   .material input:focus + label, .material input:valid + label {
     transform: translateY(-24px) translateZ(0);
   }

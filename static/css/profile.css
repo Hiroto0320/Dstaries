@@ -77,20 +77,20 @@
       width: 780px;
     }
     body {
-      font-size: 38px;
+      font-size: 28px;
     }
     .material input {
-      font-size: 32px;
+      font-size: 28px!important;
     }
     .material label {
-      font-size: medium;
+      font-size: medium!important;
     }
     .material-button button {
-      font-size: large;
+      font-size: large!important;
     }
     .icon {
-      height: 90px;
-      width: 90px;
+      height: 82px!important;
+      width: 82px!important;
     }
   }
   

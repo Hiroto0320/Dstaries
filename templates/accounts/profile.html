@@ -115,21 +115,49 @@
 
       <section id="account">
         <ul>
-          <li class="material">
+          <li class="material message-icon-li">
             <img class="icon" {% if user.icon %} src="{{ user.icon.url }}" {% endif %}>
           </li>
+          <h2>Message rooms</h3>
           {% if user.thread_receiver.all %}
           {% for message in user.thread_receiver.all %}
-          <h3>Message rooms</h3>
-          <li class="material">
-          <a href="{% url 'accounts:message' message.user1.id %}" class="message-room">{{ message.user1.username }}</a>
+          <li class="material message-li">
+            {% comment %} <fieldset class="message-field"> {% endcomment %}
+            <a href="{% url 'accounts:message' message.user1.id %}" class="message-room">
+              {% if message.user1.icon %}
+              <img src="{{ message.user1.icon.url }}" class="message-icon">
+              {% else %}
+              <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
+              {% endif %}
+              {{ message.user1.username }}
+            </a>
+            <form method="POST" action="{% url 'accounts:profile' %}" class="message-form">
+              {% csrf_token %}
+              <button type="submit" value="{{ message.user1.id }}" name="delete_message-room_user1" class="delete-button" onclick="return confirm('Are you sure to delete this message room and all messages in it?\r\nThis cannot be undone.')">delete</button>
+              </form>
+          {% comment %} </fieldset> {% endcomment %}
           </li>
+          {% comment %} <form method="POST" action="{% url 'accounts:profile' %}" class="message-form">
+          <button type="submit" name="delete_message-room">delete message room</button> {% endcomment %}
           {% endfor %}
           {% endif %}
           {% if user.thread_sender.all %}
           {% for message in user.thread_sender.all %}
-          <li class="material">
-          <a href="{% url 'accounts:message' message.user2.id %}" class="message-room">{{ message.user2.username }}</a>
+          <li class="material message-li">
+            {% comment %} <fieldset class="message-field"> {% endcomment %}
+          <a href="{% url 'accounts:message' message.user2.id %}" class="message-room">
+            {% if message.user2.icon %}
+            <img src="{{ message.user2.icon.url }}" class="message-icon">
+            {% else %}
+            <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
+            {% endif %}
+            {{ message.user2.username }}
+          </a>
+          <form method="POST" action="{% url 'accounts:profile' %}" class="message-form">
+            {% csrf_token %}
+            <button type="submit" value="{{ message.user2.id }}" name="delete_message-room_user2" class="delete-button" onclick="return confirm('Are you sure to delete this message room and all messages in it?\r\nThis cannot be undone.')">delete</button>
+            </form>
+        {% comment %} </fieldset> {% endcomment %}
           </li>
           {% endfor %}
           {% endif %}

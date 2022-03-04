@@ -186,4 +186,4 @@ CLOUDINARY_STORAGE = {
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 #Login Session
-SESSION_COOKIE_AGE = 900
+# SESSION_COOKIE_AGE = 900

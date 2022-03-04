@@ -31,7 +31,7 @@
     {% comment %} {% if user.is_authenticated %} {% endcomment %}
         <h2>Active users!</h2>
         <h3>Users who are keeping a diary frequently.</h3>
-        {% for user in users|slice:":3" %}
+        {% for user in users|slice:":5" %}
             {% if user.is_public %}
                 <ul>
                     <li>

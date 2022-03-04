@@ -607,7 +607,53 @@
     border-radius: 10px;
   }
 
-  .material_account label {
+  .message-room {
+    text-decoration: none;
+    color: black;
+  }
+
+  .message-icon {
+    border-radius: 90%;
+    height: 36px;
+    width: 36px;
+  }
+
+  .delete-button{
+    border-radius: 20px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 3px;
+    font-size: 1.0rem;
+    border: 2px solid black;
+  }
+
+  .delete-button:hover {
+    background-color: rgb(114, 5, 5);
+    color: white;
+    border: 2px solid black;
+  }
+
+  .message-form {
+    float: right;
+    margin: 10px;
+    }
+
+  hr{
+    color: black;
+  }
+
+  .material.message-li {
+    border-bottom: solid;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
+
+  /* .message-field {
+    width: 80%;
+    padding-bottom: 0;
+  } */
+
+  /* .material_account label {
     transition: all 150ms ease-out;
     will-change: transform;
     transform: translateZ(0);
@@ -623,9 +669,9 @@
     opacity: 0.5;
     line-height: 1.5;
     text-align: right;
-  }
+  } */
 
-  .material_account {
+  /* .material_account {
     padding: 0 10px;
   }
 
@@ -647,7 +693,7 @@
     background: #ebebeb;
   }
 
-  
+   */
   @keyframes rotateIn {
     0% {
       opacity: 0;

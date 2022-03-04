@@ -15,6 +15,7 @@
 </head>
 <section>
 <h1>{{ friend.username }} : {{ user.username }}</h1>
+<h2>～ Talk room ～</h2>
 <ul>
 {% for message in messages %}
 {% if message.sender == user %}

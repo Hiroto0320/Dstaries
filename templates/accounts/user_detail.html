@@ -28,18 +28,10 @@
     </h2>
     {% if request.user != user_detail %}
     <h3>
-      <a href="{% url 'accounts:message' user_detail.id %}">Send messages!</a>
+      <a href="{% url 'accounts:message' user_detail.id %}" class="send-messages">Send messages!</a>
     </h3>
     {% endif %}
     <ul class="detail-content">
-      <fieldset>
-        <legend>I like</legend>
-      <li class="detail-li">
-        {% if user_detail.favorite %}
-        {{ user_detail.favorite }}
-        {% endif %}
-      </li>
-      </fieldset>
       <fieldset>
         <legend>My dream</legend>
       <li class="detail-li">
@@ -53,6 +45,14 @@
       <li class="detail-li">
         {% if user_detail.task %}
         {{ user_detail.task }}
+        {% endif %}
+      </li>
+      </fieldset>
+      <fieldset>
+        <legend>I like</legend>
+      <li class="detail-li">
+        {% if user_detail.favorite %}
+        {{ user_detail.favorite }}
         {% endif %}
       </li>
       </fieldset>

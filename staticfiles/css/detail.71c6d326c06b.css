@@ -1,0 +1,114 @@
+body {
+  background: linear-gradient(pink 0%, whitesmoke 85%, whitesmoke 100%);
+  margin: 0;
+  overflow-y: scroll;
+}
+
+.detail-icon {
+  border-radius: 90%;
+  height: 120px;
+  width: 120px;
+}
+
+
+.detail-username {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2.0rem;
+}
+
+.detail-username:hover {
+  color: rgb(73, 48, 48);
+  border-bottom: 2px solid;
+  margin-bottom: -2px;
+}
+
+.send-messages {
+  text-decoration: none;
+  color: black;
+  border: solid;
+  padding: 5px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.send-messages:hover {
+  background-color: #efffd7;
+}
+
+.detail-to-diary {
+  text-decoration: none;
+  color: black;
+
+}
+
+.detail-to-website {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  margin: 60px auto;
+  padding: 40px 30px;
+  max-width: 100%;
+  line-height: 1.6em;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.detail-content {
+  list-style: none;
+}
+
+fieldset {
+  margin-top: 20px;
+  border: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  width: 700px;
+}
+
+legend {
+  font-weight: 600;
+  font-family: serif;
+  /* border-bottom: 1px solid; */
+  cursor: default;
+  font-size: 1.1rem;
+}
+
+.detail-li {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+
+.detail-diary {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.diary-fieldset {
+  text-align: center;
+  margin-top: 50px;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.diary-fieldset:hover {
+  /* background-color: #ffbbdd; */
+  background-color: #ffe098;
+}
+
+.see-diary {
+  float: right;
+  font-weight: 600;
+  margin-top: -20px;
+}

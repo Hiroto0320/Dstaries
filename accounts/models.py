@@ -57,13 +57,13 @@ class Thread(models.Model):
         'User', on_delete=models.CASCADE, related_name='thread_sender')
     user2 = models.ForeignKey(
         'User', on_delete=models.CASCADE, related_name='thread_receiver')
-    
+
     class Meta:
         db_table = 'thread'
     
     def __str__(self):
         return f'{self.user1} : {self.user2}'
-    
+
 class Message(models.Model):
     thread = models.ForeignKey(
         'Thread', on_delete=models.CASCADE)
@@ -73,6 +73,16 @@ class Message(models.Model):
         'User', on_delete=models.CASCADE, related_name='message_receiver')
     content = models.CharField(max_length=255, null=False)
     date = models.DateTimeField(auto_now_add=True)
+    # is_read = models.BooleanField(default=False)
 
     class Meta:
         db_table = 'message'
+
+# class Like(models.Model):
+#     following = models.ForeignKey(
+#         'User', on_delete=models.CASCADE, related_name='like')
+#     Liked = models.ForeignKey(
+#         'User', on_delete=models.CASCADE, related_name='liked')
+
+#     class Meta:
+#         db_table = 'user_like'

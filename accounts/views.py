@@ -74,6 +74,10 @@ def profile(request):
             website=request.POST.get('website'),
             is_public=request.POST.get('is_public-account'),
             )
+        if request.POST.get('delete_message-room_user1'):
+            Thread.objects.filter(user2=request.user, user1=request.POST.get('delete_message-room_user1')).delete()
+        if request.POST.get('delete_message-room_user2'):
+            Thread.objects.filter(user1=request.user, user2=request.POST.get('delete_message-room_user2')).delete()
         User.objects.filter(email=request.user.email).update(
             Actively_point=DiaryContent.objects.filter(user=request.user).count()
         )

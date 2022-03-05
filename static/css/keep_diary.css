@@ -99,6 +99,10 @@
     .material-button button {
       font-size: large!important;
     }
+    .upcoming {
+      margin-top: 60px;
+    }
+
   }
   
   span.nav {
@@ -589,7 +593,6 @@
   .content-label {
     margin-bottom: -20px;
   }
-  
   @keyframes rotateIn {
     0% {
       opacity: 0;

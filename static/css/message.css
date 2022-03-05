@@ -18,6 +18,14 @@ section {
     vertical-align: middle;
   }
 
+@media only screen and (max-width: 480px) {
+    .message-textarea{
+        height: 130px;
+        width: 280px;
+        float: right;
+    }   
+}
+
 .my-message, .friend-message {
     margin: 20px;
 }

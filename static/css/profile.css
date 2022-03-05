@@ -102,13 +102,14 @@
       font-size: 28px;
     }
     .material {
-      padding: 0;
+      padding-top: 0 10px 10px 10px;
     }
     .material input {
       font-size: 26px!important;
     }
     .material label {
       font-size: medium!important;
+      margin-bottom: 5px;
     }
     .material-button button {
       font-size: large!important;

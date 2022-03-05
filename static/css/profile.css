@@ -109,8 +109,11 @@
     }
     .about-label {
       font-size: medium;
-      margin-bottom: 0px!important;
+      padding-bottom: 0!important;
       margin-top: 5px!important;
+    }
+    .about-text {
+      font-size: 26px!important;
     }
     .material label {
       font-size: medium!important;

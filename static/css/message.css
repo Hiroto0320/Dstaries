@@ -93,3 +93,7 @@ h2 {
 .date {
     font-size: small;
 }
+
+.message-ul {
+    padding-left: 0;
+}

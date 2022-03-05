@@ -121,7 +121,6 @@ legend {
 
 @media only screen and (max-width: 480px) {
   section {
-    margin: 20px auto;
     padding-top: 40px;
     max-width: 100%;
     line-height: 1.6em;

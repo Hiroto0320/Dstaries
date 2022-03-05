@@ -31,7 +31,7 @@
   }
   @media only screen and (max-width: 480px) {
 	  .form {
-		  padding: 0.1rem;
+		  padding: 0.1rem!important;
 	  }
 	  .container {
 		  height: 500px;

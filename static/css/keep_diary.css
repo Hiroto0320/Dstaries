@@ -100,7 +100,8 @@
       font-size: large!important;
     }
     .upcoming {
-      margin-top: 100px!important;
+      /* margin-top: 100px!important; */
+      top: 50px!important;
     }
 
   }

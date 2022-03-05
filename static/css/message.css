@@ -22,9 +22,11 @@ section {
     .message-textarea{
         height: 100px!important;
         width: 180px!important;
+        font-size: 1.1rem;
     }   
     .message-form {
         margin-left: 10%;
+        font-size: 1.2rem;
     }
     body {
         overflow-x: hidden;

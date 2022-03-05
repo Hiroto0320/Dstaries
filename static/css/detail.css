@@ -121,8 +121,8 @@ legend {
 
 @media only screen and (max-width: 480px) {
   section {
-    margin: 0;
-    /* padding: 40px 10px; */
+    margin: 20px auto;
+    padding: 40px 10px;
     max-width: 100%;
     line-height: 1.6em;
     display: flex;
@@ -135,6 +135,6 @@ legend {
     width: 95%;
   }
   fieldset {
-    width: 90%;
+    width: 95%;
   }
 }

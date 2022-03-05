@@ -115,6 +115,7 @@
     }
     .material textarea {
       padding-right: 10px;
+      overflow-x: scroll;
     }
     .about-text {
       font-size: 22px!important;

@@ -95,20 +95,20 @@
   }*/
   @media only screen and (max-width: 480px) { 
     #settings {
-      height: 680px;
+      height: 80%;
       width: 100%;
     }
     body {
-      font-size: 28px;
+      font-size: 20px;
     }
     .material {
       padding-top: 0 10px 10px 10px;
     }
     .material input {
-      font-size: 26px!important;
+      font-size: 18px!important;
     }
     .about-label {
-      font-size: 20px;
+      font-size: 16px;
       margin-top: 10px!important;
       margin-bottom: -20px!important;
     }
@@ -119,10 +119,10 @@
       width: 32em;
     } */
     .about-text {
-      font-size: 26px!important;
+      font-size: 18px!important;
     }
     .material label {
-      font-size: 20px!important;
+      font-size: 16px!important;
       margin-bottom: 5px;
     }
     .material-button button {

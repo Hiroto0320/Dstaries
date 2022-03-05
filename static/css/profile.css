@@ -111,6 +111,10 @@
       font-size: medium;
       padding-bottom: 0!important;
       margin-top: 5px!important;
+      margin-bottom: -20px;
+    }
+    .material textarea {
+      padding-right: 10px;
     }
     /* .about-text {
       font-size: 22px!important;
@@ -641,13 +645,6 @@
     margin-bottom: 8px;
     text-align: center;
   }
-
-  .explain-field {
-    font-size: 15px;
-    margin-top: -90px;
-    text-align: left;
-    padding-left: 5%;
-    }
 
   .about-label {
     margin-bottom: -20px;

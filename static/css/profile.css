@@ -95,8 +95,8 @@
   }*/
   @media only screen and (min-width: 480px) { 
     #settings {
-      height: 880px;
-      width: 8400px;
+      height: 960px;
+      width: 840px;
     }
     body {
       font-size: 28px;
@@ -114,6 +114,9 @@
     }
     .about-text {
       font-size: 26px!important;
+    }
+    li .large {
+      width: 90%;
     }
     .material label {
       font-size: medium!important;

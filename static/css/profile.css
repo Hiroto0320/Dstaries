@@ -95,7 +95,7 @@
   }*/
   @media only screen and (min-width: 480px) { 
     #settings {
-      height: 960px;
+      height: 990px;
       width: 860px;
     }
     body {
@@ -122,7 +122,7 @@
       font-size: 24px!important;
     }
     .material label {
-      font-size: medium!important;
+      font-size: 18px!important;
       margin-bottom: 5px;
     }
     .material-button button {

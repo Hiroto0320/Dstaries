@@ -20,11 +20,15 @@ section {
 
 @media only screen and (max-width: 480px) {
     .message-textarea{
-        height: 130px;
-        width: 200px;
+        height: 100px!important;
+        width: 100px!important;
     }   
     .message-form {
-        margin-left: 20%;
+        margin-left: 10%;
+    }
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
 }
 

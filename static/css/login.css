@@ -31,7 +31,7 @@
   }
   @media only screen and (max-width: 480px) {
 	  .overlay {
-	  height: 500px;
+	  height: 400px;
 	  width: 450px;
 	  }
   }

@@ -95,11 +95,14 @@
   }*/
   @media only screen and (min-width: 480px) { 
     #settings {
-      height: 840px;
+      height: 860px;
       width: 780px;
     }
     body {
       font-size: 28px;
+    }
+    .material {
+      padding: 0;
     }
     .material input {
       font-size: 26px!important;

@@ -25,9 +25,9 @@
         <form action="{% url 'accounts:keep_diary' %}" method="POST">
           {% csrf_token %}
           <ul>
-            <li>
+            <li class="large">
               <fieldset class="material">
-                <div>
+                <div class="diary-title">
                   <select name="diary-title" value="Title" required>
                     <option value="" disabled selected style="display:none;" class="None-option">Choose a book</option>
                     {% for title in diaries %}
@@ -38,7 +38,7 @@
                 </div>
               </fieldset>
             </li>
-            <li>
+            <li class="large">
               <fieldset class="material">
                 <div>
                   <input type="text" name="diary-subtitle" placeholder="Diary subtitle"></input>

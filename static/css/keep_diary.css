@@ -584,6 +584,9 @@
   .delete-content, .delete-book {
     text-align: center;
   }
+  .diary-title {
+    text-align: center;
+  }
   
   @keyframes rotateIn {
     0% {

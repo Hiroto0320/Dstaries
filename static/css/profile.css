@@ -107,17 +107,14 @@
       float: right;
       list-style: none;
       padding: 10px;
-      margin-top: 5px;
-      margin-right: 10px;
       margin-left: 0;
       margin-bottom: 0;
     }
     nav li {
       float: left;
-      margin-left: 16px;
     }
     nav a {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: whitesmoke;
       text-decoration: none;
       margin: 5px 0 0 20px;

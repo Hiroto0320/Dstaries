@@ -134,4 +134,7 @@ legend {
     vertical-align: middle;
     width: 95%;
   }
+  fieldset {
+    width: 90%;
+  }
 }

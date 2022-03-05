@@ -115,10 +115,11 @@
     }
     .material textarea {
       padding-right: 10px;
+      width: 0.9rem;
     }
-    /* .about-text {
+    .about-text {
       font-size: 22px!important;
-    } */
+    }
     .material label {
       font-size: medium!important;
       margin-bottom: 5px;

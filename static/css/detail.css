@@ -132,9 +132,8 @@ legend {
     align-items: center;
     flex-direction: column;
     vertical-align: middle;
-    width: 95%;
   }
   fieldset {
-    width: 90%;
+    width: 450px;
   }
 }

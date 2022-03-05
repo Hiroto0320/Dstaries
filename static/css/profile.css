@@ -95,7 +95,7 @@
   }*/
   @media only screen and (min-width: 480px) { 
     #settings {
-      height: 1100px;
+      height: 1050px;
       width: 100%;
     }
     body {
@@ -129,8 +129,8 @@
       font-size: large!important;
     }
     .icon {
-      height: 82px!important;
-      width: 82px!important;
+      height: 100px!important;
+      width: 100px!important;
     }
    }
   span.nav {

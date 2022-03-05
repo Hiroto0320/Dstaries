@@ -107,6 +107,11 @@
     .material input {
       font-size: 26px!important;
     }
+    .about-label {
+      font-size: medium;
+      margin-bottom: 0px!important;
+      margin-top: 5px!important;
+    }
     .material label {
       font-size: medium!important;
       margin-bottom: 5px;

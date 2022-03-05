@@ -94,11 +94,35 @@
     }
   }*/
   @media only screen and (max-width: 480px) { 
-    nav {
+    nnav {
+      position: fixed;
+      width: 100%;
       height: 50px;
+      z-index: 10;
+      background: #191970;
+      opacity: 0.9;
+      top: 0;
     }
-    ul li a {
-      font-size: 16px;
+    nav ul {
+      float: right;
+      list-style: none;
+      padding: 10px;
+      margin-top: 5px;
+      margin-right: 10px;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+    nav li {
+      float: left;
+      margin-left: 16px;
+    }
+    nav a {
+      font-size: 1.3rem;
+      color: whitesmoke;
+      text-decoration: none;
+      margin: 5px 0 0 20px;
+      display: block;
+      opacity: 1;
     }
     #settings {
       height: 80%;

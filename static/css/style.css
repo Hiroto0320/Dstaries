@@ -45,7 +45,7 @@ nav a:hover {
   nav ul {
     float: right;
     list-style: none;
-    padding: 10px;
+    padding: 8px;
     margin-left: 0;
     margin-bottom: 0;
   }
@@ -53,10 +53,10 @@ nav a:hover {
     float: left;
   }
   nav a {
-    font-size: 14px;
+    font-size: 12px;
     color: whitesmoke;
     text-decoration: none;
-    margin: 5px 0 0 20px;
+    margin: 5px 0 0 10px;
     display: block;
     opacity: 1;
   }

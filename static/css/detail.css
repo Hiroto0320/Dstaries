@@ -120,9 +120,6 @@ legend {
 }
 
 @media only screen and (max-width: 480px) {
-  body {
-    width: 100%;
-  }
   section {
     margin: 20px auto;
     padding-top: 40px;

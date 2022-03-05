@@ -89,7 +89,10 @@ legend {
   text-align: center;
   font-size: 1.15rem;
 }
-
+.detail-li-about {
+  font-weight: bolder;
+  font-size: 1.15rem;
+}
 
 .detail-diary {
   text-align: center;

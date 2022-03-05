@@ -95,8 +95,8 @@
   }*/
   @media only screen and (min-width: 480px) { 
     #settings {
-      height: 860px;
-      width: 780px;
+      height: 880px;
+      width: 8400px;
     }
     body {
       font-size: 28px;

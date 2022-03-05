@@ -85,10 +85,11 @@
       margin-bottom: -20px!important;
     }
     .material textarea {
+      max-width: 100%;
       height: 10em;
       width: 40em;
     }
-    .about-text {
+    .diary-content {
       font-size: 26px!important;
     }
     .material label {

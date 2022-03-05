@@ -31,8 +31,8 @@
   }
   @media only screen and (max-width: 480px) {
 	  body {
-		  height: 65%;
-		  width: 90%;
+	  height: 500px;
+	  width: 450px;
 	  }
   }
   

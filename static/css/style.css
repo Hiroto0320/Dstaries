@@ -32,6 +32,35 @@ nav a {
 nav a:hover {
   color: #d2691e;
 }
+@media only screen and (max-width: 480px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    background: #191970;
+    opacity: 0.9;
+    top: 0;
+  }
+  nav ul {
+    float: right;
+    list-style: none;
+    padding: 10px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  nav li {
+    float: left;
+  }
+  nav a {
+    font-size: 14px;
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 5px 0 0 20px;
+    display: block;
+    opacity: 1;
+  }
+}
 /* .logo {
   height: 75px;
   float: left;

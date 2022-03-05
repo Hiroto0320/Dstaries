@@ -1,9 +1,12 @@
 <html>
 {% load static %}
 <!-- navbar Start -->
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% comment %} <script type="text/javascript" src="{% static 'js/app.js' %}"></script> {% endcomment %}
 <title>dstories {% block title %}{% endblock %}</title>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 <nav>
     <div class="logo"></div>
     <ul>

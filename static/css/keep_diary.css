@@ -65,7 +65,7 @@
     height: 540px;
     top: 30px;
   }
-  @media only screen and (min-width: 480px) { 
+  /* @media only screen and (min-width: 480px) { 
     #settings {
       height: 900px;
       width: 100%;
@@ -100,7 +100,7 @@
     .material-button button {
       font-size: large!important;
     }
-  }
+  } */
   
   span.nav {
     transition: all 150ms ease-out;

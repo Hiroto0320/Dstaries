@@ -37,7 +37,8 @@ body {
 
 .content-ul {
     list-style: none;
-    width: 85%;
+    width: 90%;
+    margin-right: 20px;
 }
 
 hr {

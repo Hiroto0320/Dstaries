@@ -21,7 +21,7 @@ section {
 @media only screen and (max-width: 480px) {
     .message-textarea{
         height: 100px!important;
-        width: 100px!important;
+        width: 180px!important;
     }   
     .message-form {
         margin-left: 10%;

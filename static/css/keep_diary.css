@@ -77,7 +77,7 @@
     .material input {
       font-size: 16px!important;
     }
-    .diary-label {
+    .content-label {
       font-size: 14px;
       margin-top: 10px!important;
       margin-bottom: -20px!important;
@@ -564,6 +564,7 @@
 
   .diary-content {
     margin-bottom: 45px;
+    margin-left: 20px;
   }
 
   select {
@@ -577,15 +578,14 @@
     float: left;
   }
 
-  .diary-label {
-    margin-bottom: -20px;
-  }
-
   .delete-content, .delete-book {
     text-align: center;
   }
   .diary-title {
     text-align: center;
+  }
+  .content-label {
+    margin-bottom: -20px;
   }
   
   @keyframes rotateIn {

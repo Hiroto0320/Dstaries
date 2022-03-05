@@ -30,9 +30,12 @@
 	place-items: center;
   }
   @media only screen and (max-width: 480px) {
-	  .overlay {
-	  height: 400px;
-	  width: 450px;
+	  .form {
+		  padding: 0.1rem;
+	  }
+	  .container {
+		  height: 500px;
+		  width: 450px;
 	  }
   }
   

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} / Write stories{% endblock %}
 {% block content %}
+{% load static %}
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TC56R95R84"></script>
@@ -12,8 +13,6 @@
   gtag('config', 'G-TC56R95R84');
 </script>
 </head>
-
-{% load static %}
 <link rel="stylesheet" href="{% static 'css/keep_diary.css' %}">
 <div id="settings" ontouchstart="<%= true %>">
     <input checked="<%= true %>" class="nav" name="nav" type="radio"></input>

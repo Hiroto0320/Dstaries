@@ -38,13 +38,10 @@ section {
         padding: 30px 20px;
     }
     .my-message, .friend-message {
-        font-size: 1.0rem!important;
+        font-size: 0.9rem!important;
     }
     .send-button {
         font-size: 1.1rem!important;
-    }
-    .date {
-        margin-top: 10px;
     }
 }
 
@@ -57,7 +54,7 @@ section {
     font-size: 1.3rem;
     width: 40%;
     overflow-wrap: break-word;
-    margin: 0 25px 0 auto;
+    margin: 5px 25px 5px auto;
 }
 
 .friend-message {
@@ -65,7 +62,7 @@ section {
     font-size: 1.3rem;
     width: 40%;
     overflow-wrap: break-word;
-    margin: 0 auto 0 25px;
+    margin: 5px auto 5px 25px;
 }
 
 .message-form {

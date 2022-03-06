@@ -43,7 +43,7 @@ section {
         width: 45%;
     }
     .message-icon.me {
-        margin-right: 0px;
+        margin-right: 5px;
     }
     .send-button {
         font-size: 1.1rem!important;

@@ -32,6 +32,9 @@ section {
         overflow-x: hidden;
         overflow-y: scroll;
     }
+    section {
+        padding: 30px 10px;
+    }
 }
 
 .my-message, .friend-message {

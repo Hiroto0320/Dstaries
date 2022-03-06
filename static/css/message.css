@@ -35,6 +35,9 @@ section {
     section {
         padding: 30px 10px;
     }
+    .my-message, .friend-message {
+        font-size: 1.1rem!important;
+    }
 }
 
 .my-message, .friend-message {

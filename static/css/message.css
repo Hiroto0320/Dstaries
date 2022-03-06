@@ -41,6 +41,12 @@ section {
         font-size: 0.9rem!important;
         margin-top: 30px;
     }
+    .message-icon.me {
+        display: none;
+    }
+    .my-message {
+        margin-right: 5px;
+    }
     .send-button {
         font-size: 1.1rem!important;
     }

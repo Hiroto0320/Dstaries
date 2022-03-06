@@ -39,14 +39,10 @@ section {
     }
     .my-message, .friend-message {
         font-size: 0.9rem!important;
-        line-height: 15px;
         margin-top: 20px;
     }
     .send-button {
         font-size: 1.1rem!important;
-    }
-    .date {
-        margin-top: 20px;
     }
 }
 

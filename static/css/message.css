@@ -40,12 +40,13 @@ section {
     .my-message, .friend-message {
         font-size: 0.9rem!important;
         margin-top: 30px;
+        width: 50%!important;
     }
     .message-icon.me {
         display: none;
     }
     .my-message {
-        margin-right: 5px;
+        margin-right: 0;
     }
     .send-button {
         font-size: 1.1rem!important;

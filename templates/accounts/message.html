@@ -21,7 +21,7 @@
 {% if message.sender == user %}
 <h4 class="my-message">{{ message.content }}
     {% if user.icon %}
-    <img src="{{ user.icon.url }}" class="message-icon me">
+    {% comment %} <img src="{{ user.icon.url }}" class="message-icon me"> {% endcomment %}
     {% else %}
     <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
     {% endif %}

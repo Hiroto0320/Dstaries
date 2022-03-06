@@ -20,13 +20,3 @@ $(window).scroll(function() {
     $nav.removeClass('scrolled');
   }
 });
-
-
-// $(function () {
-//   $('#openModal').click(function(){
-//       $('#modalArea').fadeIn();
-//   });
-//   $('#closeModal , #modalBg').click(function(){
-//     $('#modalArea').fadeOut();
-//   });
-// });

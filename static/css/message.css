@@ -56,7 +56,6 @@ section {
     width: 40%;
     overflow-wrap: break-word;
     margin: 5px 0px 5px auto;
-    position: absolute;
 }
 
 .friend-message {
@@ -90,7 +89,6 @@ section {
 }
 .message-icon.me {
     margin-right: -35px;
-    position: relative;
 }
 .message-icon.friend {
     margin-left: -35px;

@@ -25,8 +25,8 @@ section {
         font-size: 1.0rem!important;
     }
     .message-form {
-        margin-left: 15%;
         font-size: 1.1rem!important;
+        right: 5px!important;
     }
     body {
         overflow-x: hidden;

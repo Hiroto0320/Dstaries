@@ -99,6 +99,9 @@
       width: 100%;
       font-size: 18px;
     }
+    section ul {
+      padding: 6px!important;
+    }
     .material {
       padding-top: 0 10px 10px 10px;
     }

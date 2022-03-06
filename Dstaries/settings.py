@@ -25,7 +25,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = 'django-insecure-yse%_z6^q7&^n85nf64u)k^5-xfd$y=+bk9$8+)*ox6&=3-tcg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://dstaries.herokuapp.com', 'http://127.0.0.1']
 
@@ -176,7 +176,6 @@ AUTH_USER_MODEL = 'accounts.User'
 #     'API_KEY': env('CLOUDINARY_API_KEY'),
 #     'API_SECRET': env('CLOUDINARY_API_SECRET'),
 # }
-
 
 CLOUDINARY_STORAGE = {
 'CLOUD_NAME': 'hmzq68sig',

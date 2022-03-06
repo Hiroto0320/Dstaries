@@ -52,7 +52,7 @@ section {
 }
 
 .my-message {
-    text-align: right;
+    text-align: right!important;
     font-size: 1.3rem;
     width: 40%;
     overflow-wrap: break-word;

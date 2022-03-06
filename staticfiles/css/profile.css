@@ -99,6 +99,9 @@
       width: 100%;
       font-size: 18px;
     }
+    section ul {
+      padding: 6px!important;
+    }
     .material {
       padding-top: 0 10px 10px 10px;
     }
@@ -106,7 +109,7 @@
       font-size: 16px!important;
     }
     .about-label {
-      font-size: 12px;
+      font-size: 14px;
       margin-top: 10px!important;
       margin-bottom: -20px!important;
     }
@@ -120,7 +123,7 @@
       font-size: 16px!important;
     }
     .material label {
-      font-size: 14px!important;
+      font-size: 12px!important;
       margin-top: 2px;
     }
     .material-button button {

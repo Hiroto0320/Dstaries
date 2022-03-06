@@ -35,16 +35,21 @@ section {
         background-repeat: no-repeat;
     }
     section {
-        padding: 30px 20px;
+        padding: 30px 5px 30px 20px;
     }
     .my-message, .friend-message {
-        font-size: 1.0rem!important;
+        font-size: 0.9rem!important;
+        margin-top: 30px;
+        width: 45%!important;
+    }
+    .message-icon.me {
+        display: none;
+    }
+    .my-message {
+        margin-right: 0;
     }
     .send-button {
         font-size: 1.1rem!important;
-    }
-    .date {
-        margin-top: 10px;
     }
 }
 
@@ -57,7 +62,7 @@ section {
     font-size: 1.3rem;
     width: 40%;
     overflow-wrap: break-word;
-    margin: 0 0 0 auto;
+    margin: 5px 25px 5px auto;
 }
 
 .friend-message {
@@ -65,7 +70,7 @@ section {
     font-size: 1.3rem;
     width: 40%;
     overflow-wrap: break-word;
-    margin: 0 auto 0 0;
+    margin: 5px auto 5px 25px;
 }
 
 .message-form {

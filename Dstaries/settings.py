@@ -187,3 +187,6 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 #Login Session
 # SESSION_COOKIE_AGE = 900
+
+#SSL
+SECURE_SSL_REDIRECT = True

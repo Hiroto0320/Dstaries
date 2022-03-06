@@ -35,12 +35,15 @@ section {
         background-repeat: no-repeat;
     }
     section {
-        padding: 30px 40px;
-        width: 45%;
+        padding: 30px 30px;
     }
     .my-message, .friend-message {
         font-size: 0.9rem!important;
         margin-top: 30px;
+        width: 45%;
+    }
+    .message-icon.me {
+        margin-right: -10px;
     }
     .send-button {
         font-size: 1.1rem!important;

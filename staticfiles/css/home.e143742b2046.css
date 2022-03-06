@@ -116,4 +116,8 @@ body {
       opacity: 1;
     }
   }
-  
+  @media only screen and (max-width: 480px) {
+    .inner h1 {
+      font-size: 3em;
+    }
+  }

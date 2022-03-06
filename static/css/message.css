@@ -48,6 +48,9 @@ section {
     .send-button {
         font-size: 1.1rem!important;
     }
+    .date {
+        font-size: x-small;
+    }
 }
 
 .my-message, .friend-message {
@@ -123,7 +126,7 @@ h2 {
 }
 
 .date {
-    font-size: small!important;
+    font-size: small;
 }
 
 .message-ul {

@@ -16,6 +16,7 @@
 <body>  
 	<div class="login-wrap">
 		<div class="login-html">
+			<div class="invalid-message">{% include 'includes/messages.html' %}</div>
 			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
 			<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
 			<div class="login-form">
@@ -23,8 +24,8 @@
 				{% csrf_token %}
 					<div class="sign-in-htm">
 						<div class="group">
-							<label for="user" class="label">Email</label>
-							<input id="user" type="email" class="input" name="email" required>
+							<label for="email" class="label">Email</label>
+							<input id="email" type="email" class="input" name="email" required>
 						</div>
 						<div class="group">
 							<label for="pass" class="label">Password</label>

@@ -123,7 +123,7 @@ h2 {
 }
 
 .date {
-    font-size: small;
+    font-size: small!important;
 }
 
 .message-ul {

@@ -23,7 +23,7 @@ section {
         height: 100px!important;
         width: 200px!important;
         font-size: 1.0rem!important;
-    }   
+    }
     .message-form {
         margin-left: 10%;
         font-size: 1.1rem!important;
@@ -41,11 +41,17 @@ section {
 .my-message {
     text-align: right;
     font-size: 1.3rem;
+    width: 50%;
+    float: right;
+    overflow-wrap: break-word;
 }
 
 .friend-message {
     text-align: left;
     font-size: 1.3rem;
+    width: 50%;
+    float: left;
+    overflow-wrap: break-word;
 }
 
 .message-form {

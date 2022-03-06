@@ -39,6 +39,7 @@ section {
     }
     .my-message, .friend-message {
         font-size: 1.1rem!important;
+        line-height: 70%;
     }
     .send-button {
         font-size: 1.1rem!important;

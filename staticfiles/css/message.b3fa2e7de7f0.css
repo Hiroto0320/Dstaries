@@ -38,7 +38,7 @@ section {
         padding: 30px 20px;
     }
     .my-message, .friend-message {
-        font-size: 1.1rem!important;
+        font-size: 1.0rem!important;
     }
     .send-button {
         font-size: 1.1rem!important;
@@ -56,16 +56,16 @@ section {
     text-align: right;
     font-size: 1.3rem;
     width: 40%;
-    float: right;
     overflow-wrap: break-word;
+    margin: 0 0 0 auto;
 }
 
 .friend-message {
     text-align: left;
     font-size: 1.3rem;
     width: 40%;
-    float: left;
     overflow-wrap: break-word;
+    margin: 0 auto 0 0;
 }
 
 .message-form {

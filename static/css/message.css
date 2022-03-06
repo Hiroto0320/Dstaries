@@ -108,6 +108,10 @@ h2 {
     height: 40px;
     font-size: 1.3rem;
     float: right;
+    background-color: rgba(53, 53, 250, 0.911);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .date {

@@ -108,6 +108,8 @@ h2 {
     height: 40px;
     font-size: 1.3rem;
     float: right;
+    background-color: rgb(44, 44, 247);
+    color: white;
 }
 
 .date {

@@ -82,6 +82,12 @@ section {
     width: 32px;
     border-radius: 90%;
 }
+.message-icon.me {
+    margin-right: -35px;
+}
+.message-icon.friend {
+    margin-left: -35px;
+}
 
 h1, h2 {
     text-align: center;

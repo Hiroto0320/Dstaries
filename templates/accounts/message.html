@@ -21,7 +21,7 @@
 {% if message.sender == user %}
 <h4 class="my-message">{{ message.content }}
     {% if user.icon %}
-    <img src="{{ user.icon.url }}" class="message-icon">
+    <img src="{{ user.icon.url }}" class="message-icon me">
     {% else %}
     <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
     {% endif %}
@@ -30,9 +30,9 @@
 {% elif message.sender == friend %}
 <h4 class="friend-message">
     {% if friend.icon %}
-    <img src="{{ friend.icon.url }}" class="message-icon">
+    <img src="{{ friend.icon.url }}" class="message-icon friend">
     {% else %}
-    <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
+    <img src="{% static 'css/img/default.jpg' %}" class="message-icon friend">
     {% endif %}
     {{ message.content }}
     <div class="date">{{ message.date|date:"Y/n/j P" }}</div>

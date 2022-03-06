@@ -6,7 +6,7 @@ body {
 
 section {
     margin: 40px auto;
-    padding: 40px 40px;
+    padding: 40px 30px;
     max-width: 100%;
     line-height: 1.6em;
     display: flex;
@@ -31,6 +31,12 @@ section {
     body {
         overflow-x: hidden;
         overflow-y: scroll;
+    }
+    section {
+        padding: 30px 10px;
+    }
+    .my-message, .friend-message {
+        font-size: 1.1rem!important;
     }
 }
 
@@ -75,6 +81,12 @@ section {
     height: 32px;
     width: 32px;
     border-radius: 90%;
+}
+.message-icon.me {
+    margin-right: -35px;
+}
+.message-icon.friend {
+    margin-left: -35px;
 }
 
 h1, h2 {

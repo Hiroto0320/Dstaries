@@ -57,7 +57,7 @@ section {
     font-size: 1.3rem;
     width: 40%;
     overflow-wrap: break-word;
-    margin: 0 0 0 auto;
+    margin: 0 25px 0 auto;
 }
 
 .friend-message {
@@ -65,7 +65,7 @@ section {
     font-size: 1.3rem;
     width: 40%;
     overflow-wrap: break-word;
-    margin: 0 auto 0 0;
+    margin: 0 auto 0 25px;
 }
 
 .message-form {

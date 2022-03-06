@@ -19,15 +19,9 @@
 <ul class="message-ul">
 {% for message in messages %}
 {% if message.sender == user %}
-<h4 class="my-message">{{ message.content }}</h4>
-<div>
-{% if user.icon %}
-    <img src="{{ user.icon.url }}" class="message-icon me">
-    {% else %}
-    <img src="{% static 'css/img/default.jpg' %}" class="message-icon">
-    {% endif %}
+<h4 class="my-message">{{ message.content }}
     <div class="date">{{ message.date|date:"Y/n/j P" }}</div>
-</div>
+</h4>
 {% elif message.sender == friend %}
 <h4 class="friend-message">
     {% if friend.icon %}

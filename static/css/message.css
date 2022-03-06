@@ -40,7 +40,6 @@ section {
     .my-message, .friend-message {
         font-size: 0.9rem!important;
         margin-top: 30px;
-        width: 45%!important;
     }
     .send-button {
         font-size: 1.1rem!important;

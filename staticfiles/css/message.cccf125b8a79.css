@@ -8,7 +8,7 @@ body {
 
 section {
     margin: 40px auto;
-    padding: 40px 30px;
+    padding: 40px 50px;
     max-width: 100%;
     line-height: 1.6em;
     display: flex;
@@ -35,10 +35,16 @@ section {
         background-repeat: no-repeat;
     }
     section {
-        padding: 30px 25px;
+        padding: 30px 20px;
     }
     .my-message, .friend-message {
         font-size: 1.1rem!important;
+    }
+    .send-button {
+        font-size: 1.1rem!important;
+    }
+    .date {
+        margin-top: 10px;
     }
 }
 
@@ -49,7 +55,7 @@ section {
 .my-message {
     text-align: right;
     font-size: 1.3rem;
-    width: 50%;
+    width: 40%;
     float: right;
     overflow-wrap: break-word;
 }
@@ -57,7 +63,7 @@ section {
 .friend-message {
     text-align: left;
     font-size: 1.3rem;
-    width: 50%;
+    width: 40%;
     float: left;
     overflow-wrap: break-word;
 }
@@ -108,8 +114,10 @@ h2 {
     height: 40px;
     font-size: 1.3rem;
     float: right;
-    background-color: rgb(44, 44, 247);
+    background-color: rgba(53, 53, 250, 0.911);
     color: white;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .date {

@@ -25,12 +25,13 @@ section {
         font-size: 1.0rem!important;
     }
     .message-form {
-        margin-left: 30%;
+        margin-left: 15%;
         font-size: 1.1rem!important;
     }
     body {
         overflow-x: hidden;
         overflow-y: scroll;
+        background-repeat: no-repeat;
     }
     section {
         padding: 30px 25px;

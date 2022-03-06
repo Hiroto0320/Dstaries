@@ -46,6 +46,7 @@
 <form method="POST" action="{% url 'accounts:message' friend.id %}" class="message-form">
     {% csrf_token %}
     <textarea placeholder="send message to {{ friend.username }}." name="message" class="message-textarea" maxlength="255" required></textarea>
+    <br>
     <button type="submit" class="send-button">send!</button>
 </form>
 </section>

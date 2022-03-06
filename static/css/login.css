@@ -24,6 +24,9 @@ a{color:inherit;text-decoration:none}
 		width: 100%;
 		background-size: cover;
 	}
+	.login-html{
+		padding:60px 50px 50px 50px;
+	}
 }
 .login-html{
 	width:100%;

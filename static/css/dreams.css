@@ -38,6 +38,7 @@ section {
     /* line-height: 300px; */
     transition: 1.0s;
     color: black;
+    overflow-wrap: break-word;
 }
 .dream_to_detail:hover {
     background-color: rgb(216, 44, 216);
@@ -64,7 +65,7 @@ section {
         /* line-height: 300px; */
     }
     .dream {
-        font-size: 14px;
+        font-size: 12px!important;
     }
     .dream-h3 {
         margin-top: 0!important;

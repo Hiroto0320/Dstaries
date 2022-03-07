@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="{% static 'css/dreams.css' %}">
 </head>
 <body>
-<h1 class="title">Dreams</h1>
+<header>
+<h1 class="title">Many dreams all over the world!</h1>
+<h2>Click and look at dreamer's detail!</h2>
+</header>
 <section>
 {% for dreamer in dreamers|slice:":7" %}
 <h3 class="dream-h3">

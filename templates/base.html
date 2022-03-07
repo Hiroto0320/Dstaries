@@ -13,12 +13,6 @@
         <li><a href="{% url 'dreams:home' %}">Home</a></li>
 
         {% if user.is_authenticated %}
-        <li>
-            <a href="{% url 'accounts:signout' %}" method="POST">
-            {% csrf_token %}
-            Sign Out
-            </a>
-        </li>
         {% comment %} <li>
             <a href="{% url 'accounts:' %}" method="POST">
             {% csrf_token %}
@@ -31,6 +25,12 @@
         {% else %}
         <li><a href="{% url 'accounts:diary' user.id %}">My story</a></li>
         {% endif %}
+        <li>
+            <a href="{% url 'accounts:signout' %}" method="POST">
+            {% csrf_token %}
+            Sign out
+            </a>
+        </li>
         {% else %}
         <li><a href="{% url 'accounts:sign' %}">Sign in  /  Sign up</a></li>
         {% endif %}

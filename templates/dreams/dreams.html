@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% block title %}/ dreams{% endblock %}
 {% block content %}
 {% load static %}
 <head>
     <link rel="stylesheet" href="{% static 'css/dreams.css' %}">
 </head>
 <body>
-<h1 class="title">Dreams Page</h1>
+<h1 class="title">Dreams</h1>
 <section>
 {% for dreamer in dreamers %}
 <h3 class="dream-h3">

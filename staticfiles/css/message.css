@@ -35,21 +35,21 @@ section {
         background-repeat: no-repeat;
     }
     section {
-        padding: 30px 5px 30px 20px;
+        padding: 30px 30px;
     }
     .my-message, .friend-message {
         font-size: 0.9rem!important;
-        margin-top: 30px;
-        width: 45%!important;
+        margin-top: 30px!important;
+        width: 50%!important;
     }
     .message-icon.me {
-        display: none;
-    }
-    .my-message {
-        margin-right: 0;
+        margin-right: 0px!important;
     }
     .send-button {
         font-size: 1.1rem!important;
+    }
+    .date {
+        font-size: x-small!important;
     }
 }
 
@@ -58,11 +58,11 @@ section {
 }
 
 .my-message {
-    text-align: right;
+    text-align: right!important;
     font-size: 1.3rem;
     width: 40%;
     overflow-wrap: break-word;
-    margin: 5px 25px 5px auto;
+    margin: 5px 0px 5px auto;
 }
 
 .friend-message {

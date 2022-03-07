@@ -29,6 +29,11 @@
 </header>
 <section>
     {% comment %} {% if user.is_authenticated %} {% endcomment %}
+    <h2>
+        <a href="{% url 'dreams:dreams' %}">
+            Dreams
+        </a>
+    </h2>
         <h2>Active users!</h2>
         <h3>Users who are keeping a diary frequently.</h3>
         {% for user in users|slice:":5" %}

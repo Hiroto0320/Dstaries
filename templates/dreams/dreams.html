@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/dreams.css' %}">
+</head>
+<body>
+<h1 class="title">Dreams Page</h1>
+<section>
+{% for dreamer in dreamers %}
+<h3 class="dream-h3">
+    <a href="{% url 'accounts:user_detail' dreamer.id %}" class="dream_to_detail">
+    {% if dreamer.icon %}
+    <img src="{{ dreamer.icon.url }}" class="dreamer_icon">
+    {% else %}
+    <img src="{% static 'css/img/default.jpg' %}" class="dreamer_icon">
+    {% endif %}
+    </a>
+    <span class="dream">{{ dreamer.dream }}</span>
+</h3>
+{% endfor %}
+</section>
+</body>
+{% endblock %}

@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding-top: 50px;
+    background: linear-gradient(70deg, rgb(8, 8, 102), whitesmoke 30%, rgb(29, 29, 255) 100%);
+    background-repeat: no-repeat;
+}
+section {
+    margin: 40px auto;
+    padding: 30px 30px;
+    max-width: 100%;
+    line-height: 1.6em;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: middle;
+  }
+.title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.dream_to_detail {
+    text-decoration: none;
+}
+.dreamer_icon {
+    border-radius: 90%;
+    height: 36px;
+    width: 36px;
+}
+.dream {
+    border-bottom: 2px solid black;
+}

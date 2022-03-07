@@ -11,3 +11,10 @@ def home(request):
         'users':users
     }
     return render(request, 'dreams/home.html', data)
+
+def dreams(request):
+    dreamers = User.objects.exclude(dream__exact="")
+    data = {
+        'dreamers':dreamers,
+    }
+    return render(request, 'dreams/dreams.html', data)

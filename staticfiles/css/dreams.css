@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding-top: 50px;
-    background: linear-gradient(70deg, rgb(8, 8, 102), rgb(27, 27, 238) 70%);
+    background: linear-gradient(70deg, rgb(8, 8, 102), whitesmoke 30%, rgb(29, 29, 255) 100%);
+    background-repeat: no-repeat;
 }
 section {
     margin: 40px auto;
@@ -20,10 +21,6 @@ section {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 0;
-}
-.dream-h3 {
-    border-radius: 20px;
-    background-color: whitesmoke;
 }
 .dream_to_detail {
     text-decoration: none;

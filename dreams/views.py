@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from accounts.models import User
+from django.db.models import Q
 
 app_name = 'dreams'
 
@@ -13,7 +14,7 @@ def home(request):
     return render(request, 'dreams/home.html', data)
 
 def dreams(request):
-    dreamers = User.objects.exclude(dream__exact="")
+    dreamers = User.objects.exclude(Q(dream__exact="")|Q(is_public=False))
     data = {
         'dreamers':dreamers,
     }

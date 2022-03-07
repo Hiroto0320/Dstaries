@@ -53,10 +53,10 @@ nav a:hover {
     float: left;
   }
   nav a {
-    font-size: 12px;
+    font-size: 0.85rem!important;
     color: whitesmoke;
     text-decoration: none;
-    margin: 5px 0 0 10px;
+    margin: auto 0 auto 7px;
     display: block;
     opacity: 1;
   }

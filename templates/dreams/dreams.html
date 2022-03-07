@@ -8,16 +8,11 @@
 <body>
 <h1 class="title">Dreams</h1>
 <section>
-{% for dreamer in dreamers %}
+{% for dreamer in dreamers|slice:":7" %}
 <h3 class="dream-h3">
     <a href="{% url 'accounts:user_detail' dreamer.id %}" class="dream_to_detail">
-    {% if dreamer.icon %}
-    <img src="{{ dreamer.icon.url }}" class="dreamer_icon">
-    {% else %}
-    <img src="{% static 'css/img/default.jpg' %}" class="dreamer_icon">
-    {% endif %}
+        <span class="dream">{{ dreamer.dream }}</span>
     </a>
-    <span class="dream">{{ dreamer.dream }}</span>
 </h3>
 {% endfor %}
 </section>

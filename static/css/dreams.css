@@ -1,23 +1,23 @@
 body {
     margin: 0;
     padding-top: 50px;
-    background: linear-gradient(135deg, rgb(12, 12, 150), whitesmoke 55%, rgb(29, 29, 255) 100%);
+    background: linear-gradient(135deg, rgb(7, 7, 153), whitesmoke 55%, rgb(21, 21, 175) 100%);
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 section {
     margin: 40px auto;
-    padding: 30px 30px;
+    padding: 30px 100px;
     max-width: 100%;
     line-height: 1.6em;
-    display: flex;
-    box-sizing: border-box;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    vertical-align: middle;
+  }
+  .dream-h3 {
+      display: flex;
+      margin: -30px auto;
+  }
+  .dream-h3:nth-child(even) {
+    flex-direction: row-reverse;
   }
 .title {
     text-align: center;
@@ -25,13 +25,29 @@ section {
     margin-bottom: 0;
 }
 .dream_to_detail {
+    position: relative;
     text-decoration: none;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.733);
+    text-align: center;
+    /* align-items: center;
+    justify-content: center; */
+    /* line-height: 300px; */
+    transition: 1.0s;
+    color: black;
 }
-.dreamer_icon {
-    border-radius: 90%;
-    height: 36px;
-    width: 36px;
+.dream_to_detail:hover {
+    background-color: rgb(216, 44, 216);
+    color: rgb(4, 4, 136);
 }
 .dream {
-    border-bottom: 2px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 16px;
 }

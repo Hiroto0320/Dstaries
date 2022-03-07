@@ -108,10 +108,27 @@ body {
     color: black;
     text-decoration: none;
   }
-  @media only screen and (max-width: 480px) {
-
+  .home-to-dreams-h2 {
+    margin-bottom: 0;
   }
-  
+  .home-to-dreams-explain {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .invalid-message {
+    color: rgb(255, 108, 108);
+    text-align: center;
+    margin-bottom: 15px;
+    animation: FadeOut 2.0s ease 3.0s 1 forwards;
+  }  
+  @media only screen and (max-width: 480px) {
+    .inner h1 {
+      font-size: 3em;
+    }
+    section h2 {
+      font-size: 1.6rem;
+    }
+  }
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -120,11 +137,11 @@ body {
       opacity: 1;
     }
   }
-  @media only screen and (max-width: 480px) {
-    .inner h1 {
-      font-size: 3em;
+  @keyframes FadeOut {
+    0% {
+      opacity: 1;
     }
-    section h2 {
-      font-size: 1.6rem;
+    100% {
+      opacity: 0;
     }
   }

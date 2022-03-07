@@ -29,18 +29,17 @@ header {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    /* background-color: whitesmoke; */
-    background: radial-gradient(white, rgb(58, 117, 255) 75%);
+    background-color: whitesmoke;
     text-align: center;
     /* align-items: center;
     justify-content: center; */
     /* line-height: 300px; */
-    transition: all 1.0s 0s ease;
+    transition: all 1.0s 1.0s ease;
     color: black;
     overflow-wrap: break-word;
 }
 .dream_to_detail:hover {
-    background-color: white;
+    background: radial-gradient(white, rgb(58, 117, 255) 75%);
     /* background: radial-gradient(white, rgb(65, 93, 255) 90%); */
 }
 .dream {
@@ -62,7 +61,7 @@ header {
         /* align-items: center;
         justify-content: center; */
         /* line-height: 300px; */
-        background: radial-gradient(white, rgb(58, 117, 255) 75%);
+        background: radial-gradient(white, rgb(74, 128, 255) 95%);
     }
     .dream {
         font-size: 12px!important;

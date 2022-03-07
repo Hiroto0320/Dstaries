@@ -49,7 +49,7 @@ section {
         font-size: 1.1rem!important;
     }
     .date {
-        font-size: x-small;
+        font-size: x-small!important;
     }
 }
 

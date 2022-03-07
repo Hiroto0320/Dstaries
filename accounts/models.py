@@ -12,7 +12,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     icon = models.FileField(upload_to='icons/', null=True)
     joined_date = models.DateField(auto_now_add=True)
     introduction = models.CharField(max_length=450, blank=True)
-    dream = models.CharField(max_length=150, blank=True)
+    dream = models.CharField(max_length=125, blank=True)
     task = models.CharField(max_length=255, blank=True)
     website = models.URLField(blank=True)
     Actively_point = models.IntegerField(default=0)

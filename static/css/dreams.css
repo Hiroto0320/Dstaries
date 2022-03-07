@@ -3,6 +3,8 @@ body {
     padding-top: 50px;
     background: linear-gradient(135deg, rgb(12, 12, 150), whitesmoke 55%, rgb(29, 29, 255) 100%);
     background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 section {
     margin: 40px auto;

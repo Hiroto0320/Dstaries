@@ -66,4 +66,10 @@ section {
     .dream {
         font-size: 14px;
     }
+    .dream-h3 {
+        margin-top: 0!important;
+    }
+    section {
+        padding: 30px 30px!important;
+    }
 }

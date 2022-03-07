@@ -18,7 +18,7 @@
 <h1>{{ friend.username }} : {{ user.username }}</h1>
 <h2>～ Talk room ～</h2>
 <ul class="message-ul">
-{% for message in messages %}
+{% for message in direct_messages %}
 {% if message.sender == user %}
 <h4 class="my-message">
     {% if user.icon %}

@@ -18,6 +18,7 @@
 <header>
     <div class="headline">
         <div class="inner">
+			<div class="invalid-message">{% include 'includes/messages.html' %}</div>
             <h1>Dstaries</h1>
             {% if user.is_authenticated %}
             <p>welcome {{ user.username }}! </p>

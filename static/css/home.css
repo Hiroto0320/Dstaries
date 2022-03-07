@@ -115,6 +115,12 @@ body {
     margin-top: 0;
     margin-bottom: 50px;
   }
+  .invalid-message {
+    color: rgb(255, 108, 108);
+    text-align: center;
+    margin-bottom: 15px;
+    animation: FadeOut 2.0s ease 3.0s 1 forwards;
+  }
   @media only screen and (max-width: 480px) {
 
   }
@@ -133,5 +139,13 @@ body {
     }
     section h2 {
       font-size: 1.6rem;
+    }
+  }
+  @keyframes FadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }

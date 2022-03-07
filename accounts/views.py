@@ -119,6 +119,7 @@ def diary_content(request, diary_id):
         }
         return render(request, 'accounts/diary_content.html', data)
     else:
+        messages.error(request, 'You can not enter.')
         return redirect('dreams:home')
 
 @login_required(login_url='accounts:sign')
@@ -160,6 +161,7 @@ def keep_diary(request):
 def message(request, id):
     friend = get_object_or_404(User, pk=id)
     if (request.user == friend) or (not friend.is_public):
+        messages.error(request, 'You can not enter.')
         return redirect('dreams:home')
     if request.method == 'POST':
         try:
@@ -180,9 +182,9 @@ def message(request, id):
         )
     to_me_messages = Message.objects.filter(receiver=request.user, sender=friend).order_by('date')
     from_me_messages = Message.objects.filter(sender=request.user, receiver=friend).order_by('date')
-    messages = to_me_messages|from_me_messages
+    direct_messages = to_me_messages|from_me_messages
     data = {
-        'messages':messages,
+        'direct_messages':direct_messages,
         'friend':friend,
     }
     return render(request, 'accounts/message.html', data)

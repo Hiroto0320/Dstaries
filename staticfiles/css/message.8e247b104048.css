@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    margin-top: 60px;
+    background: linear-gradient(120deg, #a6d363 0%, whitesmoke 75%, whitesmoke 100%);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+section {
+    margin: 40px auto;
+    padding: 40px 70px 40px 40px;
+    max-width: 100%;
+    line-height: 1.6em;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    /* align-items: center; */
+    flex-direction: column;
+    vertical-align: middle;
+  }
+
+@media only screen and (max-width: 480px) {
+    .message-textarea{
+        height: 100px!important;
+        width: 200px!important;
+        font-size: 1.0rem!important;
+    }
+    .message-form {
+        font-size: 1.1rem!important;
+    }
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        background-repeat: no-repeat;
+    }
+    section {
+        padding: 30px 30px;
+    }
+    .my-message, .friend-message {
+        font-size: 0.9rem!important;
+        margin-top: 30px!important;
+        width: 50%!important;
+    }
+    .message-icon.me {
+        margin-right: 0px!important;
+    }
+    .send-button {
+        font-size: 1.1rem!important;
+    }
+    .date {
+        font-size: x-small!important;
+    }
+}
+
+.my-message, .friend-message {
+    margin: 20px;
+}
+
+.my-message {
+    text-align: right!important;
+    font-size: 1.3rem;
+    width: 40%;
+    overflow-wrap: break-word;
+    margin: 5px 0px 5px auto;
+}
+
+.friend-message {
+    text-align: left;
+    font-size: 1.3rem;
+    width: 40%;
+    overflow-wrap: break-word;
+    margin: 5px auto 5px 25px;
+}
+
+.message-form {
+    margin: 40px 0 0 auto;
+}
+
+.message-textarea {
+    resize: none;
+    height: 240px;
+    width: 420px;
+    font-size: 1.5rem;
+}
+
+::placeholder {
+    color: black;
+    opacity: 0.4;
+  }
+
+.message-icon {
+    height: 32px;
+    width: 32px;
+    border-radius: 90%;
+}
+.message-icon.me {
+    margin-right: -35px;
+}
+.message-icon.friend {
+    margin-left: -35px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: xx-large;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+.send-button {
+    width: 100px;
+    height: 40px;
+    font-size: 1.3rem;
+    float: right;
+    background-color: rgba(53, 53, 250, 0.911);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.date {
+    font-size: small;
+}
+
+.message-ul {
+    padding-left: 0;
+}

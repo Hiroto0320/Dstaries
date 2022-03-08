@@ -9,7 +9,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     favorite = models.CharField(max_length=100, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
-    icon = models.FileField(upload_to='icons/', null=False, default='https://res.cloudinary.com/hmzq68sig/image/upload/v1646733194/media/icons/default_jjjs8l.png')
+    icon = models.FileField(upload_to='icons/', null=False, default='icons/default_jjjs8l.png')
     joined_date = models.DateField(auto_now_add=True)
     introduction = models.CharField(max_length=450, blank=True)
     dream = models.CharField(max_length=125, blank=True)

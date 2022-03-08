@@ -64,11 +64,13 @@ body {
     text-align: center;
     font-style: italic;
     font-family: serif;
+    margin-bottom: 10px;
   }
 
   section h3 {
     text-align: center;
     font-size: 1.3rem;
+    margin-top: 0;
   }
   
   h2, a, p {
@@ -109,11 +111,11 @@ body {
     text-decoration: none;
   }
   .home-to-dreams-h2 {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
   .home-to-dreams-explain {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
   .invalid-message {
     color: rgb(255, 108, 108);

@@ -117,6 +117,7 @@ body {
   .home-to-dreams-explain {
     margin-top: 0;
     margin-bottom: 70px;
+    border-bottom: 2px;
   }
   .invalid-message {
     color: rgb(255, 108, 108);

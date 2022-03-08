@@ -60,7 +60,7 @@
         <legend>About me</legend>
       <li class="detail-li-about">
         {% if user_detail.introduction %}
-        {{ user_detail.introduction | linebreaksbr }}
+        <p>{{ user_detail.introduction | linebreaksbr }}</p>
         {% endif %}
       </li>
       </fieldset>

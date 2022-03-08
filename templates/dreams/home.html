@@ -43,9 +43,9 @@
                 <ul>
                     <li>
                         {% if user.icon %}
-                            <img src="{{ user.icon.url }}" height="80px" width="80px" style="border-radius: 8px;">
+                            <img src="{{ user.icon.url }}" alt="icon" height="80px" width="80px" style="border-radius: 8px;">
                         {% else %}
-                            <img src="{% static 'css/img/default.jpg' %}" height="80px" width="80px" style="border-radius: 8px;">
+                            <img src="{% static 'css/img/default.jpg' %}" alt="default icon" height="80px" width="80px" style="border-radius: 8px;">
                         {% endif %}
                     </li>
                     <li>

@@ -29,19 +29,19 @@ header {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    /* background-color: whitesmoke; */
-    background: radial-gradient(white, rgb(48, 96, 255) 95%);
+    background: radial-gradient(white, rgb(58, 117, 255) 75%);
     text-align: center;
     /* align-items: center;
     justify-content: center; */
     /* line-height: 300px; */
-    transition: all 1.0s 0s ease;
+    transition: 1.0s;
     color: black;
     overflow-wrap: break-word;
 }
 .dream_to_detail:hover {
-    background-color: white;
+    /* background: radial-gradient(white, rgb(58, 117, 255) 75%); */
     /* background: radial-gradient(white, rgb(65, 93, 255) 90%); */
+    transform: translateY(-5px);
 }
 .dream {
     position: absolute;
@@ -55,17 +55,17 @@ header {
 
 @media only screen and (max-width: 480px) {
     .dream_to_detail {
-        height: 150px!important;
-        width: 150px!important;
+        height: 180px!important;
+        width: 180px!important;
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.733);
         text-align: center;
         /* align-items: center;
         justify-content: center; */
         /* line-height: 300px; */
+        background: radial-gradient(whitesmoke, rgb(187, 213, 255) 40%, rgb(58, 110, 253) 80%, rgb(23, 65, 255));
     }
     .dream {
-        font-size: 12px!important;
+        font-size: 14px!important;
         width: 125px;
     }
     .dream-h3 {

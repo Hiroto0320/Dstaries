@@ -23,7 +23,7 @@
             {% if user.is_authenticated %}
             <p>welcome {{ user.username }}! </p>
             {% else %}
-            <p>welcome here dreamers! </p>
+            <p>What is your dream?</p>
             {% endif %}
         </div>
     </div>
@@ -37,7 +37,7 @@
     </h2>
     <h3 class="home-to-dreams-explain">Click and see many dreams!</h3>
         <h2>Active users!</h2>
-        <h3>Users who are keeping a diary frequently.</h3>
+        <h3>Users who are writing stories frequently.</h3>
         {% for user in users|slice:":5" %}
             {% if user.is_public %}
                 <ul>
@@ -63,12 +63,11 @@
     <!-- about website -->
     <h2>Let`s shere your dream with people all over the world and move forward together !</h2>
     <p>
-        This website allows you to see many dreams all over the world and We can get inspired each other.
-    </p>
-    <p>
-        You can also send messages to other public users. If you do not want anyone to send you messages and see your profile, you can set your account as private accounts.
+        This website allows you to see many dreams all over the world and we can get inspired each other. Let's create your account and shere your dream or the goals in front of you!
     </p>
     <br>
+    <h2>You can communicate with other dreamers!</h2>
+    <p>You can send private messages to public users. If you do not want receive any message, you can set your account private.</p>
     <h2>You should take a look at how you spend a day !</h2>
     <p>
         If you have what you decided to do in your mind, let's write your story on this site so that you can see how you spend a day.

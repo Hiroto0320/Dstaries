@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding-top: 100px;
-    background: linear-gradient(135deg, rgb(12, 12, 170),rgb(83, 129, 255) 30%, rgb(68, 118, 255) 65%, rgb(6, 6, 158) 100%);
+    background: linear-gradient(135deg, rgb(12, 12, 170),rgb(83, 129, 255) 30%, rgb(68, 118, 255) 65%, rgb(22, 48, 194) 100%);
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -29,18 +29,21 @@ header {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    background-color: whitesmoke;
+    background: radial-gradient(white, rgb(0, 68, 255) 90%);
     text-align: center;
     /* align-items: center;
     justify-content: center; */
     /* line-height: 300px; */
-    transition: all 1.0s 1.0s ease;
+    transition: 0.7s;
     color: black;
     overflow-wrap: break-word;
 }
 .dream_to_detail:hover {
-    background: radial-gradient(white, rgb(58, 117, 255) 75%);
+    /* background: radial-gradient(white, rgb(58, 117, 255) 75%); */
     /* background: radial-gradient(white, rgb(65, 93, 255) 90%); */
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    filter: brightness(1.2);
 }
 .dream {
     position: absolute;

@@ -21,22 +21,14 @@
 {% for message in direct_messages %}
 {% if message.sender == user %}
 <h4 class="my-message">
-    {% if user.icon %}
     <img src="{{ user.icon.url }}" class="message-icon me">
-    {% else %}
-    <img src="{% static 'css/img/default.jpg' %}" class="message-icon me">
-    {% endif %}
     <br>
     {{ message.content }}
     <div class="date">{{ message.date|date:"Y/n/j P" }}</div>
 </h4>
 {% elif message.sender == friend %}
 <h4 class="friend-message">
-    {% if friend.icon %}
     <img src="{{ friend.icon.url }}" class="message-icon friend">
-    {% else %}
-    <img src="{% static 'css/img/default.jpg' %}" class="message-icon friend">
-    {% endif %}
     {{ message.content }}
     <div class="date">{{ message.date|date:"Y/n/j P" }}</div>
 </h4>

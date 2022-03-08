@@ -27,7 +27,7 @@
           {% csrf_token %}
           <ul>
             <li class="large padding avatar">
-              <img class="icon" {% if user.icon %} src="{{ user.icon.url }}" {% endif %}>
+              <img class="icon" src="{{ user.icon.url }}">
               <div>
                   <div>
                     <p class="icon-form">{{ form }}<p>

@@ -42,11 +42,7 @@
             {% if user.is_public %}
                 <ul>
                     <li>
-                        {% if user.icon %}
-                            <img src="{{ user.icon.url }}" alt="icon" height="80px" width="80px" style="border-radius: 8px;">
-                        {% else %}
-                            <img src="{% static 'css/img/default.jpg' %}" alt="default icon" height="80px" width="80px" style="border-radius: 8px;">
-                        {% endif %}
+                        <img src="{{ user.icon.url }}" alt="icon" height="80px" width="80px" style="border-radius: 8px;">
                     </li>
                     <li>
                         <a href="{% url 'accounts:user_detail' user.id %}">{{ user.username }}</a>

@@ -47,7 +47,10 @@ def sign(request):
             user =auth.authenticate(email=email, password=password)
             if user:
                 auth.login(request, user)
-                return redirect(request.POST.get('next'))
+                if request.POST.get('next'):
+                    return redirect(request.POST['next'])
+                else:
+                    return redirect('dreams:home')
             else:
                 messages.error(request, 'Invalid login credentials')
                 return redirect('accounts:sign')

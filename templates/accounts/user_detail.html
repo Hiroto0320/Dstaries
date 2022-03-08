@@ -58,9 +58,9 @@
       </fieldset>
       <fieldset>
         <legend>About me</legend>
-      <li class="detail-li-about">
+      <li class="detail-li-about" style="text-indent:20px;">
         {% if user_detail.introduction %}
-        <p>{{ user_detail.introduction | linebreaksbr }}</p>
+        {{ user_detail.introduction | linebreaksbr }}
         {% endif %}
       </li>
       </fieldset>

@@ -43,7 +43,7 @@ header {
     /* background: radial-gradient(white, rgb(65, 93, 255) 90%); */
     transform: translateY(-20px);
     -webkit-transform: translateY(-20px);
-    filter: brightness(1.2);
+    filter: brightness(1.25);
 }
 .dream {
     position: absolute;

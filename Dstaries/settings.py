@@ -23,7 +23,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 env = environ.Env(DEBUG=(bool,False))
-env.read_env(BASE_DIR, '.env')
+env.read_env('.env')
 DEBUG = False
 # SECURITY WARNING: don't run with debug turned on in production!
 SECRET_KEY='django-insecure-yse%_z6^q7&^n85nf64u)k^5-xfd$y=+bk9$8+)*ox6&=3-tcg'

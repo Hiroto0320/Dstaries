@@ -153,9 +153,9 @@ AUTH_USER_MODEL = 'accounts.User'
 
 #cloudinary settings
 CLOUDINARY_STORAGE = {
-'CLOUD_NAME': env('CLOUD_NAME'),
-'API_KEY': env('CLOUD_API_KEY'),
-'API_SECRET': env('CLOUD_API_SECRET')
+'CLOUD_NAME': 'hmzq68sig',
+'API_KEY': '135492528419275',
+'API_SECRET': 'jPVvfv--09s4H1f4rwSZECaJwDE',
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

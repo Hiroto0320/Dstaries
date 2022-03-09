@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding-top: 100px;
-    background: linear-gradient(135deg, rgb(12, 12, 170),rgb(83, 129, 255) 30%, rgb(68, 118, 255) 65%, rgb(6, 6, 158) 100%);
+    background: linear-gradient(135deg, rgb(15, 74, 202),rgb(109, 148, 255) 20%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%);
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -15,13 +15,13 @@ section {
 header {
     text-align: center;
 }
-  .dream-h3 {
-      display: flex;
-      margin: -30px auto;
-  }
-  .dream-h3:nth-child(even) {
+.dream-h3 {
+    display: flex;
+    margin: -30px auto;
+}
+.dream-h3:nth-child(even) {
     flex-direction: row-reverse;
-  }
+}
 .dream_to_detail {
     position: relative;
     text-decoration: none;
@@ -29,19 +29,21 @@ header {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    background: radial-gradient(white, rgb(58, 117, 255) 75%);
+    background: radial-gradient(white, rgb(0, 53, 255) 90%);
     text-align: center;
     /* align-items: center;
     justify-content: center; */
     /* line-height: 300px; */
-    transition: 1.0s;
+    transition: 0.7s;
     color: black;
     overflow-wrap: break-word;
 }
 .dream_to_detail:hover {
     /* background: radial-gradient(white, rgb(58, 117, 255) 75%); */
     /* background: radial-gradient(white, rgb(65, 93, 255) 90%); */
-    transform: translateY(-5px);
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    filter: brightness(1.2);
 }
 .dream {
     position: absolute;
@@ -62,7 +64,7 @@ header {
         /* align-items: center;
         justify-content: center; */
         /* line-height: 300px; */
-        background: radial-gradient(whitesmoke, rgb(187, 213, 255) 40%, rgb(58, 110, 253) 80%, rgb(23, 65, 255));
+        background: radial-gradient(whitesmoke, rgb(149, 189, 255) 40%, rgb(45, 101, 255) 80%, rgb(0, 47, 255));
     }
     .dream {
         font-size: 14px!important;

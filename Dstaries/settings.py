@@ -22,12 +22,14 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-yse%_z6^q7&^n85nf64u)k^5-xfd$y=+bk9$8+)*ox6&=3-tcg'
-
-# SECURITY WARNING: don't run with debug turned on in production!
+import environ
+env = environ.Env(DEBUG=(bool,False))
+env.read_env('.env')
 DEBUG = False
+# SECURITY WARNING: don't run with debug turned on in production!
+SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = ['https://dstaries.herokuapp.com', 'http://127.0.0.1']
+ALLOWED_HOSTS = env('ALLOWED_HOSTS')
 
 # Application definition
 
@@ -81,19 +83,9 @@ WSGI_APPLICATION = 'Dstaries.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'Dreamers_db',
-#         'USER': 'postgres',
-#         'PASSWORD': 'Django_4869',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
-
-DATABASES = {'default': dj_database_url.config(default='postgres://postgres:Django_4869@localhost/Dreamers_db')}
+DATABASES = {
+    'default':env.db(),
+}
 
 
 # Password validation
@@ -161,25 +153,10 @@ AUTH_USER_MODEL = 'accounts.User'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #cloudinary settings
-# import environ
-# import os
-
-# env = environ.Env()
-# env.read_env(os.path.join(BASE_DIR, '.env'))
-
-# MEDIA_URL = '/media/'
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-# CLOUDINARY_STORAGE = {
-#     'CLOUD_NAME': env('CLOUDINARY_NAME'),
-#     'API_KEY': env('CLOUDINARY_API_KEY'),
-#     'API_SECRET': env('CLOUDINARY_API_SECRET'),
-# }
-
 CLOUDINARY_STORAGE = {
-'CLOUD_NAME': 'hmzq68sig',
-'API_KEY': '135492528419275',
-'API_SECRET': 'jPVvfv--09s4H1f4rwSZECaJwDE'
+'CLOUD_NAME': env('CLOUD_NAME'),
+'API_KEY': env('CLOUD_API_KEY'),
+'API_SECRET': env('CLOUD_API_SECRET')
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

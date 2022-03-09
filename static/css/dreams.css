@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding-top: 100px;
-    background: linear-gradient(135deg, rgb(12, 12, 170),rgb(83, 129, 255) 30%, rgb(68, 118, 255) 65%, rgb(22, 48, 194) 100%);
+    background: linear-gradient(135deg, rgb(15, 74, 202),rgb(109, 148, 255) 20%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%);
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;

@@ -26,7 +26,7 @@ env = environ.Env(DEBUG=(bool,False))
 env.read_env(BASE_DIR, '.env')
 DEBUG = False
 # SECURITY WARNING: don't run with debug turned on in production!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY='django-insecure-yse%_z6^q7&^n85nf64u)k^5-xfd$y=+bk9$8+)*ox6&=3-tcg'
 
 ALLOWED_HOSTS=['https://dstaries.com', 'http://127.0.0.1', 'https://dstaries.herokuapp.com']
 

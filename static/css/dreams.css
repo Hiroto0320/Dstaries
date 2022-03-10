@@ -73,8 +73,8 @@ header {
     body {
         background-image: url('./img/beach.jpg');
         position: fixed;
-        background-position:60% 100%;
-
+        background-position:58% 100%;
+        z-index: -1;
     }
     .dream_to_detail {
         height: 180px!important;

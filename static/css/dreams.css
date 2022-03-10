@@ -71,11 +71,11 @@ header {
 
 @media only screen and (max-width: 480px) {
     body {
-        background-image: url('./img/beach.jpg');
-        position: fixed;
+        background-image: url('./img/beach.jpg')!important;
+        position: fixed!important;
         background-position:58% 100%;
-        z-index: -1;
-        height:100vh;
+        z-index: -1!important;
+        height:100vh!important;
     }
     .dream_to_detail {
         height: 180px!important;

@@ -71,7 +71,10 @@ header {
 
 @media only screen and (max-width: 480px) {
     body {
-        background-image: url('./img/beach_moble.jpg')!important;
+        background-image: url('./img/beach_moble.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
     }
     .dream_to_detail {
         height: 180px!important;

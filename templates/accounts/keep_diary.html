@@ -21,7 +21,7 @@
     <span class="nav">Edit books</span>
     <main class="content">
       <section id="keep-diary">
-        <form action="{% url 'accounts:keep_diary' %}" method="POST">
+        <form action="{% url 'accounts:keep_diary' %}" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <ul>
             <li class="large">
@@ -54,6 +54,13 @@
                   <hr/>
                 </div>
               </fieldset>
+            </li>
+            <li class="attach_photo">
+              {% comment %} <label class="attach_photo-label">You can attach a photo</label>
+              <input type="file" name="attached_photo" accept="image/*"> {% endcomment %}
+              <label for="id_photo">You can attach a photo</label>
+              <input type="file" name="photo" accept="image/*" id="id_photo">
+              {% comment %} {{ photo_form }} {% endcomment %}
             </li>
             <li class="large padding">
               <fieldset class="material-button center">

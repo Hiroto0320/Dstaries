@@ -20,6 +20,7 @@
 {% comment %} <h2>Click and look at dreamer's profile!</h2> {% endcomment %}
 </header>
 <section>
+<div class="dreams">
 {% for dreamer in dreamers %}
 <h3 class="dream-h3">
     <a href="{% url 'accounts:user_detail' dreamer.id %}" class="dream_to_detail">
@@ -27,6 +28,7 @@
     </a>
 </h3>
 {% endfor %}
+</div>
 </section>
 </body>
 {% endblock %}

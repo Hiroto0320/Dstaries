@@ -71,8 +71,13 @@
             {% endif %}
         </li>
         <li>
-            <p class="content">{{ content.content }}</p>
+            <p class="content" style="text-indent:20px;">{{ content.content }}</p>
         </li>
+        {% if content.photo %}
+        <li class="photo-li">
+            <img src="{{ content.photo.url }}" class="photo">
+        </li>
+        {% endif %}
         <br>
     </ul>
     {% endfor %}

@@ -593,6 +593,15 @@
   .content-label {
     margin-bottom: -20px;
   }
+  li.attach_photo {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .attach_photo-label {
+    font-size: x-large;
+    color: black;
+  }
   @keyframes rotateIn {
     0% {
       opacity: 0;

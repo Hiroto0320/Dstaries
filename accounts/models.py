@@ -9,7 +9,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     favorite = models.CharField(max_length=100, blank=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
-    icon = models.FileField(upload_to='icons/', null=False, default='icons/default_jjjs8l.png')
+    icon = models.ImageField(upload_to='icons/', null=False, default='icons/default_jjjs8l.png')
     joined_date = models.DateField(auto_now_add=True)
     introduction = models.CharField(max_length=450, blank=True)
     dream = models.CharField(max_length=125, blank=True)
@@ -46,6 +46,7 @@ class DiaryContent(models.Model):
     diary_title = models.ForeignKey(
         'DiaryTitle', on_delete=models.CASCADE)
     content = models.CharField(max_length=700, blank=True)
+    photo = models.ImageField(upload_to='attached_photo/', null=True)
     subtitle = models.CharField(max_length=100, blank=True)
     date = models.DateTimeField(auto_now_add=True)
 

@@ -129,6 +129,7 @@ def diary_content(request, diary_id):
 def keep_diary(request):
     diaries = DiaryTitle.objects.filter(user=request.user)
     contents = DiaryContent.objects.filter(user=request.user)
+    # photo_form = forms.AttachedImageForm(request.POST or None, request.FILES or None)
     if request.method == 'POST':
         if request.POST.get('create_diary-title'):
             if not DiaryTitle.objects.filter(user=request.user, diary_title=request.POST.get('create_diary-title')).exists():
@@ -142,15 +143,18 @@ def keep_diary(request):
 
         if request.POST.get('delete_diary-content'):
             DiaryContent.objects.filter(id=request.POST.get('delete_diary-content'), user=request.user).delete()
-
+        
         if request.POST.get('diary-title'):
             title = diaries.get(diary_title=request.POST.get('diary-title'))
-            DiaryContent.objects.filter(user=request.user).create(
+            new_content = DiaryContent.objects.filter(user=request.user).create(
                 diary_title=title,
                 user=request.user,
                 content=request.POST.get('content'),
                 subtitle=request.POST.get('diary-subtitle'),
             )
+            form = forms.AttachedImageForm(request.POST or None, request.FILES or None, instance=new_content)
+            if form.is_valid():
+                form.save(commit=True)
         User.objects.filter(email=request.user.email).update(
         Actively_point=DiaryContent.objects.filter(user=request.user).count()
         )
@@ -158,6 +162,7 @@ def keep_diary(request):
     return render(request, 'accounts/keep_diary.html', context={
         'diaries': diaries,
         'contents': contents,
+        # 'photo_form':photo_form,
     })
 
 @login_required(login_url='accounts:sign')

@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    padding-top: 100px;
-    background: linear-gradient(135deg, rgb(15, 74, 202),rgb(109, 148, 255) 20%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%);
+    padding-top: 0;
+    background: linear-gradient(rgb(255, 240, 172),rgb(109, 148, 255) 20%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%);
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -14,6 +14,12 @@ section {
   }
 header {
     text-align: center;
+    background-image: url("./img/beach.77002fec3d32.jpg");
+    height: 450px;
+    background-size: cover;
+}
+.title {
+    padding-top: 180px;
 }
 .dream-h3 {
     display: flex;

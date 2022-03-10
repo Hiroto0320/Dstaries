@@ -1,23 +1,37 @@
 body {
     margin: 0;
-    padding-top: 100px;
-    background: linear-gradient(135deg, rgb(15, 74, 202),rgb(109, 148, 255) 20%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%);
+    padding-top: 0;
+    /* background: linear-gradient(rgb(255, 240, 172),rgb(109, 148, 255) 50%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%); */
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-image: url('./img/beach.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 section {
-    margin: 40px auto;
+    margin: 0 auto 35 auto;
     padding: 30px 100px;
     max-width: 100%;
     line-height: 1.6em;
+    /* background: linear-gradient(rgb(255, 243, 189),rgb(209, 255, 200) 15% ,rgb(115, 152, 253) 65%, rgb(14, 71, 196) 96%, rgb(0, 9, 90) 100%); */
   }
 header {
     text-align: center;
+    /* background-image: url('./img/beach.jpg'); */
+    height: 450px;
+    /* background-size: cover;
+    background-attachment: fixed; */
+}
+.title {
+    padding-top: 180px;
 }
 .dream-h3 {
     display: flex;
     margin: -30px auto;
+}
+.dreams {
+    margin-top: 30px;
 }
 .dream-h3:nth-child(even) {
     flex-direction: row-reverse;

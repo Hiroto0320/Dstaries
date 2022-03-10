@@ -70,7 +70,7 @@ header {
 }
 
 @media only screen and (max-width: 480px) {
-    body {
+    body::before {
         background-image: url('./img/beach.jpg') no-repeat center ;
         background-size: cover;
         position: fixed!important;

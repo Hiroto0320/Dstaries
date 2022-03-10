@@ -72,6 +72,7 @@ header {
 @media only screen and (max-width: 480px) {
     body {
         background-image: url('./img/beach.jpg')!important;
+        background-size: cover;
         position: fixed!important;
         background-position:58% 100%;
         z-index: -1!important;

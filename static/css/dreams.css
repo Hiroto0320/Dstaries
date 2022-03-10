@@ -77,7 +77,7 @@ header {
     header {
         background-image: url('./img/beach.jpg');
         width: 100%!important;
-        max-height: 400px!important;
+        height: 100px!important;
         background-repeat: no-repeat;
         background-size: cover!important;
         background-attachment: fixed;

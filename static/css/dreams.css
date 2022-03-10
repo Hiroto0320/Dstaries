@@ -70,18 +70,6 @@ header {
 }
 
 @media only screen and (max-width: 480px) {
-    body {
-        background-image: none!important;
-        background: linear-gradient(rgb(255, 240, 172),rgb(109, 148, 255) 50%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%)!important;
-    }
-    header {
-        background-image: url('./img/beach.jpg');
-        width: 100%!important;
-        height: 100px!important;
-        background-repeat: no-repeat;
-        background-size: cover!important;
-        background-attachment: fixed;
-    }
     .dream_to_detail {
         height: 180px!important;
         width: 180px!important;

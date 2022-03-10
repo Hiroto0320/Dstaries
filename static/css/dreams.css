@@ -75,6 +75,7 @@ header {
         position: fixed;
         background-position:58% 100%;
         z-index: -1;
+        height:100vh;
     }
     .dream_to_detail {
         height: 180px!important;

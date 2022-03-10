@@ -77,9 +77,9 @@ header {
     header {
         background-image: url('./img/beach.jpg');
         width: 100%!important;
-        max-height: 400px;
+        max-height: 400px!important;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover!important;
         background-attachment: fixed;
     }
     .dream_to_detail {

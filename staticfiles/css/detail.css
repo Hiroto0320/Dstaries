@@ -51,7 +51,7 @@ body {
 }
 
 section {
-  margin: 60px auto;
+  margin: 60px auto 0 auto;
   padding: 40px 30px;
   max-width: 100%;
   line-height: 1.6em;
@@ -121,7 +121,7 @@ legend {
 
 @media only screen and (max-width: 480px) {
   section {
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     padding-top: 40px;
     max-width: 100%;
     line-height: 1.6em;

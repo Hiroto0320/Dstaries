@@ -1,22 +1,27 @@
 body {
     margin: 0;
     padding-top: 0;
-    background: linear-gradient(rgb(255, 240, 172),rgb(109, 148, 255) 20%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%);
+    /* background: linear-gradient(rgb(255, 240, 172),rgb(109, 148, 255) 50%,rgb(102, 143, 255) 65%, rgb(25, 88, 223) 100%); */
     background-repeat: no-repeat;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-image: url("./img/beach.77ae11c44054.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 section {
-    margin: 40px auto;
+    margin: 0 auto 35 auto;
     padding: 30px 100px;
     max-width: 100%;
     line-height: 1.6em;
+    /* background: linear-gradient(rgb(255, 243, 189),rgb(209, 255, 200) 15% ,rgb(115, 152, 253) 65%, rgb(14, 71, 196) 96%, rgb(0, 9, 90) 100%); */
   }
 header {
     text-align: center;
-    background-image: url("./img/beach.77002fec3d32.jpg");
+    /* background-image: url("./img/beach.77ae11c44054.jpg"); */
     height: 450px;
-    background-size: cover;
+    /* background-size: cover;
+    background-attachment: fixed; */
 }
 .title {
     padding-top: 180px;
@@ -24,6 +29,9 @@ header {
 .dream-h3 {
     display: flex;
     margin: -30px auto;
+}
+.dreams {
+    margin-top: 30px;
 }
 .dream-h3:nth-child(even) {
     flex-direction: row-reverse;
@@ -35,7 +43,7 @@ header {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    background: radial-gradient(white, rgb(0, 53, 255) 90%);
+    background: radial-gradient(white, rgb(0, 53, 255) 95%);
     text-align: center;
     /* align-items: center;
     justify-content: center; */
@@ -49,7 +57,7 @@ header {
     /* background: radial-gradient(white, rgb(65, 93, 255) 90%); */
     transform: translateY(-20px);
     -webkit-transform: translateY(-20px);
-    filter: brightness(1.2);
+    filter: brightness(1.25);
 }
 .dream {
     position: absolute;
@@ -62,6 +70,16 @@ header {
 }
 
 @media only screen and (max-width: 480px) {
+    body::before {
+        background-image: url("./img/beach.77ae11c44054.jpg");
+        background-size: cover;
+        position: fixed!important;
+        background-position:58% 100%;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        content: "";
+    }
     .dream_to_detail {
         height: 180px!important;
         width: 180px!important;

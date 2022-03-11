@@ -33,6 +33,7 @@ body {
     background: linear-gradient(115deg, whitesmoke 0%, #f4c14e 60%, #d36950 100%);
     margin: 0;
     padding-top: 50px;
+    overflow-x: hidden;
 }
 
 .content-ul {
@@ -60,6 +61,13 @@ section {
 
 .openbook-image {
     float: right;
+}
+.photo {
+    float: right;
+    max-height: 350px;
+    max-width: 350px;
+    border: outset 10px rgb(129, 59, 2);
+    margin-right: 50px;
 }
 
 #good-a {
@@ -93,4 +101,4 @@ section {
 #good-a:hover {
     color: black;
     background: whitesmoke;
- }
+}

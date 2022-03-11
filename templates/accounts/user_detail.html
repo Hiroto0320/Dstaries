@@ -12,17 +12,6 @@
 
   gtag('config', 'G-TC56R95R84');
 </script>
-{% if user_detail.background_image %}
-<style>
-  body {
-    background-image: url({{ user_detail.background_image.url }})!important;
-    background-repeat: no-repeat!important;
-    background-attachment: fixed!important;
-    background-size: cover!important;
-    background-position:58% 100%!improtant;
-  }
-</style>
-{% endif %}
 </head>
 <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 <body>

@@ -29,7 +29,7 @@ DEBUG = False
 SECRET_KEY = env('SECRET_KEY')
 
 # ALLOWED_HOSTS = env('ALLOWED_HOSTS')
-ALLOWED_HOSTS=['https://dstaries.com', 'http://127.0.0.1', 'https://dstaries.herokuapp.com']
+ALLOWED_HOSTS=['https://dstaries.com', 'http://127.0.0.1']
 
 
 # Application definition

@@ -63,11 +63,14 @@ def signout(request):
 
 @login_required(login_url='accounts:sign')
 def profile(request):
-    form = forms.ImageForm(request.POST or None, request.FILES or None, instance=request.user)
+    icon_form = forms.IconForm(request.POST or None, request.FILES or None, instance=request.user)
+    background_image_form = forms.BackgroundImageForm(request.POST or None, request.FILES or None, instance=request.user)
     if request.method == "POST":
         if request.POST.get('username'):
-            if form.is_valid():
-                form.save(commit=True)
+            if icon_form.is_valid():
+                icon_form.save(commit=True)
+            if background_image_form.is_valid():
+                background_image_form.save(commit=True)
             User.objects.filter(username=request.user.username, email=request.user.email).update(
             username=request.POST.get('username'),
             favorite=request.POST.get('favorite'),
@@ -86,7 +89,8 @@ def profile(request):
         )
         return redirect('accounts:profile')
     return render(request, 'accounts/profile.html', context={
-        'form':form,
+        'icon_form':icon_form,
+        'background_image_form':background_image_form,
     })
 
 @login_required(login_url='accounts:sign')

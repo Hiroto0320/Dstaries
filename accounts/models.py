@@ -10,6 +10,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     icon = models.ImageField(upload_to='icons/', null=False, default='icons/default_jjjs8l.png')
+    background_image = models.ImageField(upload_to='backgrounds/', null=True)
     joined_date = models.DateField(auto_now_add=True)
     introduction = models.CharField(max_length=450, blank=True)
     dream = models.CharField(max_length=125, blank=True)

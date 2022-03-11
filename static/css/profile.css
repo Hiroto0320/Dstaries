@@ -607,14 +607,14 @@
   }
 
   .icon {
-    height: 60px;
-    width: 60px;
+    height: 72px;
+    width: 72px;
     border-radius: 90%;
   }
 
-  .icon-form label {
+  /* .icon-form label {
     display: none;
-  }
+  } */
 
   .icon-form {
     text-overflow: var(white);

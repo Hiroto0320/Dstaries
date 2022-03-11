@@ -69,6 +69,13 @@ section {
     border: outset 10px rgb(129, 59, 2);
     margin-right: 50px;
 }
+@media only screen and (max-width: 480px) {
+    .photo {
+        max-width: 200px!important;
+        max-height: 200px!important;
+        margin: 0 0 auto auto!important;
+    }
+}
 
 #good-a {
     font-size: 0.8rem;

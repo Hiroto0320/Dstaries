@@ -86,7 +86,6 @@ WSGI_APPLICATION = 'Dstaries.wsgi.application'
 DATABASES = {
     'default':env.db(),
 }
-# DATABASES = {'default': dj_database_url.config(default='postgres://postgres:Django_4869@localhost/Dreamers_db')}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

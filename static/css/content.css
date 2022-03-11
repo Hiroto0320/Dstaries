@@ -64,14 +64,14 @@ section {
 }
 .photo {
     float: right;
-    max-height: 350px;
-    max-width: 350px;
+    max-height: 250px;
+    max-width: 300px;
     border: outset 10px rgb(129, 59, 2);
     margin-right: 50px;
 }
 @media only screen and (max-width: 480px) {
     .photo {
-        max-width: 200px!important;
+        max-width: 180px!important;
         max-height: 200px!important;
         margin: 10px 10px auto auto!important;
     }

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} / account{% endblock %}
 {% block content %}
+{% load static %}
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHNBQZS05Z"></script>
@@ -12,10 +13,8 @@
   gtag('config', 'G-DHNBQZS05Z');
 </script>
 {% comment %} <meta name="viewport" content="width=device-width,initial-scale=1"> {% endcomment %}
-</head>
-{% load static %}
-
 <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
 <div id="settings" ontouchstart="<%= true %>">
     <input checked="<%= true %>" class="nav" name="nav" type="radio"></input>
     <span class="nav">Edit profile</span>

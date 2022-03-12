@@ -14,6 +14,7 @@ admin.site.register(DiaryTitle, AdminDiary)
 
 class AdminDiaryContent(admin.ModelAdmin):
     list_display = ('diary_title', 'user', 'date')
+    list_filter=('photo',)
 admin.site.register(DiaryContent, AdminDiaryContent)
 
 class AdminMessage(admin.ModelAdmin):

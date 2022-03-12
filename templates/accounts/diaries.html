@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} / stories{% endblock %}
 {% block content %}
+{% load static %}
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHNBQZS05Z"></script>
@@ -11,10 +12,9 @@
 
   gtag('config', 'G-DHNBQZS05Z');
 </script>
+<link rel="stylesheet" href="{% static 'css/diary.css' %}">
 </head>
 <body>
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/diary.css' %}">
 {% for diary in diaries|slice:":1" %}
 {% if diary.user == user %}
 <a href="{% url 'accounts:keep_diary' %}" class="keep_diary-url">

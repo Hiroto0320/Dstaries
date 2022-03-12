@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block title %} / story {% endblock %}
 {% block content %}
+{% load static %}
+{% load accounts_extras %}
 <head>
    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHNBQZS05Z"></script>
@@ -32,11 +34,9 @@
         request.send()
     }
 </script>
+<link rel="stylesheet" href="{% static 'css/content.css' %}">
 </head>
 <body>
-{% load static %}
-{% load accounts_extras %}
-<link rel="stylesheet" href="{% static 'css/content.css' %}">
 {% if contents %}
     <section>
     <h2 class="title">{{ title }}</h2>
